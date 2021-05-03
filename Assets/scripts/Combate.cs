@@ -22,10 +22,12 @@ public class Combate : MonoBehaviour
     private BotonAtaque botonAtaque;
     private Button botonMovimiento;
     public Text texto;
+    public TextMeshPro textoVictoria;
 
     // Start is called before the first frame update
     void Start()
     {
+        textoVictoria.text = "";
         j1.mostrarFlecha(true);
         j2.mostrarFlecha(false);
         panel = GameObject.Find("Panel");
@@ -138,8 +140,14 @@ public class Combate : MonoBehaviour
         
         // Resultado final: Indicamos quién gana
         if (j1.getVida() > 0)
+        {
+            textoVictoria.text = "GANADOR: JUGADOR 1";
             print("GANADOR: JUGADOR 1");
+        }
         else
+        {
+            textoVictoria.text = "GANADOR: JUGADOR 2";
             print("GANADOR: JUGADOR 2");
+        }
     }
 }
