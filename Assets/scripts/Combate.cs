@@ -43,7 +43,12 @@ public class Combate : MonoBehaviour
         j1.mostrarFlecha(turno);
         j2.mostrarFlecha(!turno);
 
-        if (animaciones) panel.SetActive(false);
+        if (animaciones)
+        {
+            j1.mostrarFlecha(false);
+            j2.mostrarFlecha(false);
+            panel.SetActive(false);
+        }
         else panel.SetActive(true);
     }
 
@@ -126,8 +131,8 @@ public class Combate : MonoBehaviour
             // TODO: hacer cálculos con las defensas de los personajes
             // Hago los cálculos de lo que se resta a cada uno
             // y muestro el resultado final
-            j2.recibirDanio(danioj1 * j1.ataqueFisico);
-            j1.recibirDanio(danioj2 * j2.ataqueFisico);
+            j2.recibirDanio(danioj1 * j1.getAtaqueFisico());
+            j1.recibirDanio(danioj2 * j2.getAtaqueFisico());
             
             // Compruebo si algún personaje ha perdido
             if (j1.getVida() <= 0 || j2.getVida() <= 0)

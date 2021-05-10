@@ -6,23 +6,23 @@ using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 {
-    public Animator animator;
     // Características
-    public float vidaMax;
-    public float ataqueFisico;
-    public float defensaFisica;
-    public float ataqueMagico;
-    public float defensaMagica;
-    public float velocidad;
+    protected float vidaMax;
+    protected float ataqueFisico;
+    protected float defensaFisica;
+    protected float ataqueMagico;
+    protected float defensaMagica;
+    protected float velocidad;
+    protected float danio;
+    protected float defensa;
     // Variables de combate
+    protected Animator m_animator;
     public float vida;
     public GameObject flecha;
     public GameObject barraVida;
     public Slider slider;
-    private float danio;
-    private float defensa;
     private bool terminado, ejecutar; // Variable para indicar si terminó de escoger
-    private Movimiento movimientoSiguiente; // Variable para guardar el próximo movimiento a ejecutar
+    //private Movimiento movimientoSiguiente; // Variable para guardar el próximo movimiento a ejecutar
     private float timer; // Variable para controlar el tiempo de animación
 
     // Start is called before the first frame update
@@ -32,7 +32,7 @@ public class Jugador : MonoBehaviour
         slider.maxValue = vidaMax;
         slider.value = vidaMax;
         timer = 0;
-        animator.GetComponent<Animator>();
+        m_animator.GetComponent<Animator>();
         flecha.SetActive(false);
         terminado = false;
     }
@@ -46,7 +46,7 @@ public class Jugador : MonoBehaviour
         if (ejecutar)
         {
             timer += Time.deltaTime;
-            animator.SetBool("atacando", true);
+            m_animator.SetBool("atacando", true);
         }
         /*else // En otro caso ponemos el contador de tiempo a 0
         {
@@ -56,7 +56,7 @@ public class Jugador : MonoBehaviour
         // Si hemos llegado a los 2 segundos de animaciones las terminamos
         if (timer > 2)
         {
-            animator.SetBool("atacando", false);
+            m_animator.SetBool("atacando", false);
             ejecutar = false;
             timer = 0;
         }
@@ -88,8 +88,8 @@ public class Jugador : MonoBehaviour
 
     public IEnumerator animacionAtacar()
     {
-        animator.SetBool("atacando", true);
-        print("animator: atacando = " + animator.GetBool("atacando"));
+        m_animator.SetBool("atacando", true);
+        print("animator: atacando = " + m_animator.GetBool("atacando"));
         
         Update();
         //Esperamos unos 2 segundos a que se ejecute la animación
@@ -98,7 +98,7 @@ public class Jugador : MonoBehaviour
 
     public void animacionIDLE()
     {
-        animator.SetBool("atacando", false);
+        m_animator.SetBool("atacando", false);
         Update();
     }
 
@@ -160,5 +160,21 @@ public class Jugador : MonoBehaviour
     {
         return vida;
     }
+    
+    public float getVidaMaxima()
+    {
+        return vidaMax;
+    }
+
+    public float getAtaqueFisico()
+    {
+        return ataqueFisico;
+    }
+
+    public void setAtaqueFisico(float ataqueFisico)
+    {
+        this.ataqueFisico = ataqueFisico;
+    }
+
 }
     
