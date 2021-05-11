@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using DefaultNamespace;
 
 public class HeroKnight : Jugador {
 
@@ -41,6 +42,13 @@ public class HeroKnight : Jugador {
         ataqueMagico = 5;
         defensaMagica = 5;
         velocidad = 10;
+        
+        Movimiento espadazo = new Movimiento("Espadazo 1", 5, "fisico");
+        Movimiento tajo = new Movimiento("Tajo rápido", 2, "fisico");
+        Movimiento espadazo2 = new Movimiento("Espadazo 2", 8, "fisico");
+        Movimiento escudo = new Movimiento("Escudo", 5, "subir_defensa");
+        
+        movimientos = new Movimiento[] {espadazo, espadazo2, tajo, escudo};
     }
     
     

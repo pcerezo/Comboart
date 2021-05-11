@@ -3,24 +3,104 @@
   <component name="ChangeListManager">
     <list default="true" id="bbdf6d45-0611-44f5-a11b-a7dc5632c387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Comboart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Comboart/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Hero Knight - Pixel Art/Demo/HeroKnight.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Hero Knight - Pixel Art/Demo/HeroKnight.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Animator_medieval_warrior.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Animator_medieval_warrior.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack1_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack1_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack2_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack2_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack3.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack3_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack3_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack4.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack4.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack4_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Attack4_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Death_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Death_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Fall.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Fall.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Fall_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Fall_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Idle_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Idle_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Jump_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Jump_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Run_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Run_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Take Hit.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Take Hit.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Take Hit_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Animations/Take Hit_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Demo/Scene Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Demo/Scene Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Attack4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Death.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Death.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Fall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Fall.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Jump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Jump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Run.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Take Hit - white silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Take Hit - white silhouette.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Take Hit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Sprites/Take Hit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EscenaCombate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EscenaCombate.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonAtaque.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/BotonAtaque.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/Combate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Combate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/scripts/Jugador.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/Jugador.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6a/6a65671e923041860ed50a562c4e4627" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6f/6fde7d7f7daf2e49899e94e494cdb3a7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8d/8d62a1b90d75598f7f22f7cfd0bb9aed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f9/f97a0d1b432579aa99e437669d02b92c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/39/391f2bab89e3e1f8e04cd6dd7b50100a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/43/4358d8601f2ed2562670121f50683ef8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/59/59ab1479b67b0c2aa64ab8756383459c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6b/6b013df4bd22949dff03a9118c0c10b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d5/d51781e78c45b65c01bbca0e3f5f274e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache/EditorEncounteredVariants" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +110,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/scripts/BotonMovimiento.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/scripts/HeroKnight.cs" />
+      <option value="$PROJECT_DIR$/Assets/Medieval Warrior Pack 2/Demo/MedievalWarrior.cs" />
+      <option value="$PROJECT_DIR$/Assets/MedievalWarrior/Demo/MedievalWarrior.cs" />
       <option value="$PROJECT_DIR$/Assets/Hero Knight - Pixel Art/Demo/HeroKnight.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/BotonAtaque.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/BotonMovimiento.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/Jugador.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/Combate.cs" />
     </changedPaths>
@@ -81,8 +168,17 @@
       <option name="presentableId" value="Default" />
       <updated>1620059195736</updated>
       <workItem from="1620059205867" duration="1098000" />
-      <workItem from="1620673231751" duration="3416000" />
+      <workItem from="1620673231751" duration="3584000" />
+      <workItem from="1620726932601" duration="20808000" />
     </task>
+    <task id="LOCAL-00001" summary="creando subclases para cada personaje">
+      <created>1620681249353</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620681249353</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,8 +196,11 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="creando subclases para cada personaje" />
+    <option name="LAST_COMMIT_MESSAGE" value="creando subclases para cada personaje" />
   </component>
 </project>

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,15 +16,15 @@ public class Combate : MonoBehaviour
     public Jugador j1;
     //public GameObject targetJ1;
     public Jugador j2;
-
-    private Jugador jugadorActual;
+    private Jugador jugadorActual, jugadorOponente;
     //public GameObject targetJ2;
     private GameObject panel;
     private BotonAtaque botonAtaque;
     private Button botonMovimiento;
     public Text texto;
     public TextMeshPro textoVictoria;
-
+    private Movimiento ultimoMovimiento;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -54,23 +55,20 @@ public class Combate : MonoBehaviour
 
     IEnumerator elegir()
     {
-        float danioj1, danioj2 = 0;
-        
         // Empieza el jugador 1 a elegir
         turno = true;
         panel.SetActive(true);
 
         String turnoJugador ;
-        do {
-            
-            do
+        do
+        {
+            do // Elección
             {
                 // Personalizamos texto según a quién le toque
                 if (turno)
                 {
                     print("Voy a mostrar la flecha del j1");
-                    /*j1.mostrarFlecha(true);
-                    j2.mostrarFlecha(false);*/
+                    // Hay que mostrar los ataques del personaje en los botones
                     Update();
                     jugadorActual = j1;
                     turnoJugador = "Jugador 1";
@@ -78,8 +76,7 @@ public class Combate : MonoBehaviour
                 else
                 {
                     print("Voy a mostrar la flecha del j2");
-                    /*j1.mostrarFlecha(false);
-                    j2.mostrarFlecha(true);*/
+
                     Update();
                     jugadorActual = j2;
                     turnoJugador = "Jugador 2";
@@ -100,59 +97,191 @@ public class Combate : MonoBehaviour
                 if (!turno) animaciones = true;
 
                 // Cambiamos el valor de turno para el siguiente jugador
-                turno = botonAtaque.getTurno();
+                turno = !turno;
 
                 // Salimos del bucle si ya todos han escogido movimientos
                 if (animaciones) break;
-                
+
                 yield return null;
             } while (true);
-        
+
             // Fase de animaciones de los personajes
-            if (animaciones) {
+            if (animaciones)
+            {
                 print("Fase de animaciones");
                 // Retardo de 2 segundos
                 yield return new WaitForSeconds(2f);
 
                 // Ejecutamos las animaciones
-                j1.ejecutarAnimaciones();
+                // el jugador con mayor velocidad ejecuta primero los movimientos y animaciones
+                // y después el otro
+                if (j1.getVelocidad() > j2.getVelocidad())
+                {
+                    // TODO: adecuar las animaciones al movimiento seleccionado
+                    j1.ejecutarAnimaciones();
+                    // Saber qué movimiento ha utilizado
+                    ultimoMovimiento = j1.getUltimoMovimiento();
+
+                    // actuar según el tipo de movimiento usado
+                    switch (ultimoMovimiento.getTipo())
+                    {
+                        // En los ataques, obtener el daño que se inflinje
+                        // y dárselo al rival
+                        case "ataque_fisico":
+                            j2.recibirDanioFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "ataque_magico":
+                            j2.recibirDanioMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        // potenciar características
+                        case "subir_ataque_fisico":
+                            j1.subirAtaqueFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_ataque_magico":
+                            j1.subirAtaqueMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_velocidad":
+                            j1.subirVelocidad(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_fisica":
+                            j1.subirDefensaFisica(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_magica":
+                            j1.subirDefensaMagica(ultimoMovimiento.getPotencia());
+                            break;
+                    }
+                    
+                    yield return new WaitForSeconds(2f);
+                    
+                    // Después sigue el siguiente
+                    j2.ejecutarAnimaciones();
+                    // Saber qué movimiento ha utilizado
+                    ultimoMovimiento = j2.getUltimoMovimiento();
+
+                    // actuar según el tipo de movimiento usado
+                    switch (ultimoMovimiento.getTipo())
+                    {
+                        // En los ataques, obtener el daño que se inflinje
+                        // y dárselo al rival
+                        case "ataque_fisico":
+                            j1.recibirDanioFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "ataque_magico":
+                            j1.recibirDanioMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        // potenciar características
+                        case "subir_ataque_fisico":
+                            j2.subirAtaqueFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_ataque_magico":
+                            j2.subirAtaqueMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_velocidad":
+                            j2.subirVelocidad(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_fisica":
+                            j2.subirDefensaFisica(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_magica":
+                            j2.subirDefensaMagica(ultimoMovimiento.getPotencia());
+                            break;
+                    }
+                }
+                else 
+                {
+                    // j2 empieza primero
+                    j2.ejecutarAnimaciones();
+                    // Saber qué movimiento ha utilizado
+                    ultimoMovimiento = j2.getUltimoMovimiento();
+
+                    // actuar según el tipo de movimiento usado
+                    switch (ultimoMovimiento.getTipo())
+                    {
+                        // En los ataques, obtener el daño que se inflinje
+                        // y dárselo al rival
+                        case "ataque_fisico":
+                            j1.recibirDanioFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "ataque_magico":
+                            j1.recibirDanioMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        // potenciar características
+                        case "subir_ataque_fisico":
+                            j2.subirAtaqueFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_ataque_magico":
+                            j2.subirAtaqueMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_velocidad":
+                            j2.subirVelocidad(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_fisica":
+                            j2.subirDefensaFisica(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_magica":
+                            j2.subirDefensaMagica(ultimoMovimiento.getPotencia());
+                            break;
+                    }
+                    
+                    yield return new WaitForSeconds(2f);
+                    
+                    // j1 actúa después
+                    j1.ejecutarAnimaciones();
+                    // Saber qué movimiento ha utilizado
+                    ultimoMovimiento = j1.getUltimoMovimiento();
+
+                    // actuar según el tipo de movimiento usado
+                    switch (ultimoMovimiento.getTipo())
+                    {
+                        // En los ataques, obtener el daño que se inflinje
+                        // y dárselo al rival
+                        case "ataque_fisico":
+                            j2.recibirDanioFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "ataque_magico":
+                            j2.recibirDanioMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        // potenciar características
+                        case "subir_ataque_fisico":
+                            j1.subirAtaqueFisico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_ataque_magico":
+                            j1.subirAtaqueMagico(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_velocidad":
+                            j1.subirVelocidad(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_fisica":
+                            j1.subirDefensaFisica(ultimoMovimiento.getPotencia());
+                            break;
+                        case "subir_defensa_magica":
+                            j1.subirDefensaMagica(ultimoMovimiento.getPotencia());
+                            break;
+                    } // switch
+                } // else
+
                 yield return new WaitForSeconds(2f);
-                j2.ejecutarAnimaciones();
-                yield return new WaitForSeconds(2f);
-                
-                animaciones = false;
-            }
+            } // if animaciones
+
+            animaciones = false;
             
-            // Fase de daños
-            // obtengo el daño que ha ejercido cada personaje
-            danioj1 = j1.getDanio();
-            danioj2 = j2.getDanio();
-            // Obtengo la defensa que tiene cada personaje
-            // TODO: hacer cálculos con las defensas de los personajes
-            // Hago los cálculos de lo que se resta a cada uno
-            // y muestro el resultado final
-            j2.recibirDanio(danioj1 * j1.getAtaqueFisico());
-            j1.recibirDanio(danioj2 * j2.getAtaqueFisico());
-            
-            // Compruebo si algún personaje ha perdido
+            // Si alguien se queda sin vida determinamos quién gana
             if (j1.getVida() <= 0 || j2.getVida() <= 0)
             {
-                // En tal caso salimos del bucle: termina el combate
+                if (j1.getVida() > 0)
+                {
+                    textoVictoria.text = "GANADOR: JUGADOR 1";
+                    print("GANADOR: JUGADOR 1");
+                }
+                else
+                {
+                    textoVictoria.text = "GANADOR: JUGADOR 2";
+                    print("GANADOR: JUGADOR 2");
+                }
+                
+                // Si alguien pierde salimos del bucle: termina el combate
                 break;
             }
-
-        } while (true); // Se sale del bucle cuando la vida de un personaje llegue a cero
-        
-        // Resultado final: Indicamos quién gana
-        if (j1.getVida() > 0)
-        {
-            textoVictoria.text = "GANADOR: JUGADOR 1";
-            print("GANADOR: JUGADOR 1");
-        }
-        else
-        {
-            textoVictoria.text = "GANADOR: JUGADOR 2";
-            print("GANADOR: JUGADOR 2");
-        }
+        } while (true);
     }
 }

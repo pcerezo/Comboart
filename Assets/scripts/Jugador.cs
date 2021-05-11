@@ -13,16 +13,16 @@ public class Jugador : MonoBehaviour
     protected float ataqueMagico;
     protected float defensaMagica;
     protected float velocidad;
-    protected float danio;
-    protected float defensa;
+    protected Movimiento[] movimientos;
     // Variables de combate
     protected Animator m_animator;
     public float vida;
     public GameObject flecha;
     public GameObject barraVida;
     public Slider slider;
+    private float danio;
     private bool terminado, ejecutar; // Variable para indicar si terminó de escoger
-    //private Movimiento movimientoSiguiente; // Variable para guardar el próximo movimiento a ejecutar
+    private Movimiento ultimoMovimiento; // Variable para guardar el próximo movimiento a ejecutar
     private float timer; // Variable para controlar el tiempo de animación
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class Jugador : MonoBehaviour
     void Update()
     {
         barraVida.SetActive(true);
-        
+        slider.value = vida;
         // Contamos el tiempo mientras se hacen las animaciones
         if (ejecutar)
         {
@@ -112,9 +112,9 @@ public class Jugador : MonoBehaviour
         this.velocidad = velocidad;
     }
 
-    public void setDanio(Movimiento mov)
+    public void setDanio(float danio)
     {
-        danio = mov.getPotencia();
+        this.danio = danio;
     }
 
     public float getDanio()
@@ -150,8 +150,16 @@ public class Jugador : MonoBehaviour
         animacionIDLE();
     }
 
-    public void recibirDanio(float danio)
+    public void recibirDanioFisico(float danio)
     {
+        // TODO: calcular vida restada según la defensa física
+        vida -= danio;
+        slider.value = vida;
+    }
+
+    public void recibirDanioMagico(float danio)
+    {
+        // TODO: calcular vida restada según la defensa mágica
         vida -= danio;
         slider.value = vida;
     }
@@ -174,6 +182,51 @@ public class Jugador : MonoBehaviour
     public void setAtaqueFisico(float ataqueFisico)
     {
         this.ataqueFisico = ataqueFisico;
+    }
+
+    public void subirAtaqueFisico(float subida)
+    {
+        ataqueFisico += subida;
+    }
+
+    public void subirAtaqueMagico(float subida)
+    {
+        ataqueMagico += subida;
+    }
+
+    public void subirVelocidad(float subida)
+    {
+        velocidad += subida;
+    }
+
+    public void subirDefensaFisica(float subida)
+    {
+        defensaFisica += subida;
+    }
+
+    public void subirDefensaMagica(float subida)
+    {
+        defensaMagica += subida;
+    }
+
+    public float getVelocidad()
+    {
+        return velocidad;
+    }
+
+    public void setVelocidad(float velocidad)
+    {
+        this.velocidad = velocidad;
+    }
+
+    public void setUltimoMovimiento(Movimiento movimiento)
+    {
+        ultimoMovimiento = movimiento;
+    }
+
+    public Movimiento getUltimoMovimiento()
+    {
+        return ultimoMovimiento;
     }
 
 }

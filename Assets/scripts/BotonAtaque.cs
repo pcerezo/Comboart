@@ -65,7 +65,7 @@ public class BotonAtaque : MonoBehaviour
     {
         // Indico que ya ha terminado de escoger en este turno
         jugadorActual.setTerminado(true);
-        jugadorActual.setDanio(movimiento);
+        jugadorActual.setDanio(movimiento.getPotencia());
         turno = !turno;
         print("Botón pulsado");
 
