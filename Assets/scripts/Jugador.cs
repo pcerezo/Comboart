@@ -6,33 +6,42 @@ using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 {
-    // Características
-    protected float vidaMax;
-    protected float ataqueFisico;
-    protected float defensaFisica;
-    protected float ataqueMagico;
-    protected float defensaMagica;
-    protected float velocidad;
-    protected Movimiento[] movimientos;
+    // Hay que saber qué personaje manejamos
+    private Personaje personaje;
     // Variables de combate
-    protected Animator m_animator;
-    public float vida;
     public GameObject flecha;
     public GameObject barraVida;
-    public Slider slider;
+    private GameObject jugador_g_o;
+    private Slider slider;
     private float danio;
     private bool terminado, ejecutar; // Variable para indicar si terminó de escoger
     private Movimiento ultimoMovimiento; // Variable para guardar el próximo movimiento a ejecutar
     private float timer; // Variable para controlar el tiempo de animación
 
+    public Jugador(int numero)
+    {
+        this.jugador_g_o = jugador_g_o;
+        // Dependiendo de qué número tenga, se le asigna un personaje u otro
+        print("Constructor de jugador");
+        switch (numero)
+        {
+            case 0:
+                personaje = new HeroKnight();
+                break;
+            case 1:
+                personaje = new MedievalWarrior();
+                break;
+        }
+
+        terminado = false;
+        print("Personaje construído");
+    }
     // Start is called before the first frame update
     void Start()
     {
+        slider = barraVida.GetComponent<Slider>();
         barraVida.SetActive(true);
-        slider.maxValue = vidaMax;
-        slider.value = vidaMax;
         timer = 0;
-        m_animator.GetComponent<Animator>();
         flecha.SetActive(false);
         terminado = false;
     }
@@ -41,25 +50,7 @@ public class Jugador : MonoBehaviour
     void Update()
     {
         barraVida.SetActive(true);
-        slider.value = vida;
-        // Contamos el tiempo mientras se hacen las animaciones
-        if (ejecutar)
-        {
-            timer += Time.deltaTime;
-            m_animator.SetBool("atacando", true);
-        }
-        /*else // En otro caso ponemos el contador de tiempo a 0
-        {
-            timer = 0;
-        }*/
-        
-        // Si hemos llegado a los 2 segundos de animaciones las terminamos
-        if (timer > 2)
-        {
-            m_animator.SetBool("atacando", false);
-            ejecutar = false;
-            timer = 0;
-        }
+        //slider.value = personaje.getVida();
 
         //Cuando termine de atacar, que vuelva a la animación IDLE
         /*if (Input.GetKeyDown(KeyCode.Space)) // si pulso la tecla de espacio, que ataque
@@ -86,32 +77,6 @@ public class Jugador : MonoBehaviour
         
     }
 
-    public IEnumerator animacionAtacar()
-    {
-        m_animator.SetBool("atacando", true);
-        print("animator: atacando = " + m_animator.GetBool("atacando"));
-        
-        Update();
-        //Esperamos unos 2 segundos a que se ejecute la animación
-        yield return new WaitForSeconds(2);
-    }
-
-    public void animacionIDLE()
-    {
-        m_animator.SetBool("atacando", false);
-        Update();
-    }
-
-    public void actualizar(float vida, float ataqueFisico, float defensaFisica, float ataqueMagico, float defensaMagica, float velocidad)
-    {
-        this.vida = vida;
-        this.ataqueFisico = ataqueFisico;
-        this.defensaFisica = defensaFisica;
-        this.ataqueMagico = ataqueMagico;
-        this.defensaMagica = defensaMagica;
-        this.velocidad = velocidad;
-    }
-
     public void setDanio(float danio)
     {
         this.danio = danio;
@@ -124,6 +89,7 @@ public class Jugador : MonoBehaviour
 
     public void setTerminado(bool terminado)
     {
+        print("Terminado: " + terminado);
         this.terminado = terminado;
     }
 
@@ -131,93 +97,21 @@ public class Jugador : MonoBehaviour
     {
         return terminado;
     }
+    
 
-    public void ejecutarAnimaciones()
-    {
-        print("Ejecutando animaciones");
-        ejecutar = true;
-        //animacionAtacar();
-        
-        // Controlamos que hayan pasado unos 3 segundos de animación
-        if (timer > 3)
-        {
-            print("Termina la animación de ataque");
-            ejecutar = false;
-            timer = 0;
-        }
-
-        // y volvemos a la animación de espera
-        animacionIDLE();
-    }
-
-    public void recibirDanioFisico(float danio)
+    /*public void recibirDanioFisico(float danio)
     {
         // TODO: calcular vida restada según la defensa física
-        vida -= danio;
-        slider.value = vida;
+        personaje.setVida(vida - danio);
+        slider.value = personaje.getVida();
     }
 
     public void recibirDanioMagico(float danio)
     {
         // TODO: calcular vida restada según la defensa mágica
-        vida -= danio;
-        slider.value = vida;
-    }
-
-    public float getVida()
-    {
-        return vida;
-    }
-    
-    public float getVidaMaxima()
-    {
-        return vidaMax;
-    }
-
-    public float getAtaqueFisico()
-    {
-        return ataqueFisico;
-    }
-
-    public void setAtaqueFisico(float ataqueFisico)
-    {
-        this.ataqueFisico = ataqueFisico;
-    }
-
-    public void subirAtaqueFisico(float subida)
-    {
-        ataqueFisico += subida;
-    }
-
-    public void subirAtaqueMagico(float subida)
-    {
-        ataqueMagico += subida;
-    }
-
-    public void subirVelocidad(float subida)
-    {
-        velocidad += subida;
-    }
-
-    public void subirDefensaFisica(float subida)
-    {
-        defensaFisica += subida;
-    }
-
-    public void subirDefensaMagica(float subida)
-    {
-        defensaMagica += subida;
-    }
-
-    public float getVelocidad()
-    {
-        return velocidad;
-    }
-
-    public void setVelocidad(float velocidad)
-    {
-        this.velocidad = velocidad;
-    }
+        personaje.setVida(vida - danio);
+        slider.value = personaje.getVida();
+    }*/
 
     public void setUltimoMovimiento(Movimiento movimiento)
     {
@@ -229,5 +123,37 @@ public class Jugador : MonoBehaviour
         return ultimoMovimiento;
     }
 
+    public float getVida()
+    {
+        return personaje.getVida();
+    }
+
+    public int getNumeroMovimientos()
+    {
+        return personaje.getNumeroMovimientos();
+    }
+
+    public Movimiento getMovimiento(int index)
+    {
+        return personaje.getMovimiento(index);
+    }
+
+    public void setPersonaje(int numero)
+    {
+        switch (numero)
+        {
+            case 0:
+                personaje = new HeroKnight();
+                break;
+            case 1:
+                personaje = new MedievalWarrior();
+                break;
+        }
+    }
+
+    public GameObject getGameObject()
+    {
+        return this.jugador_g_o;
+    }
 }
     

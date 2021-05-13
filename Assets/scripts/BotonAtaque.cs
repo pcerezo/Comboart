@@ -18,10 +18,10 @@ public class BotonAtaque : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ataque = GameObject.Find("Ataque").GetComponent<Button>();
-        ataque.gameObject.SetActive(false);
-        turno = true;
-        movimiento = new Movimiento("Ataque", 10, "Físico");
+//        ataque = GameObject.Find("Ataque").GetComponent<Button>();
+  //      ataque.gameObject.SetActive(false);
+    //    turno = true;
+      //  movimiento = new Movimiento("Ataque", 10, "Físico");
     }
 
     // Update is called once per frame
@@ -81,7 +81,7 @@ public class BotonAtaque : MonoBehaviour
 
     public void ejecutarAnimacion()
     {
-        jugadorActual.animacionAtacar();
+        //jugadorActual.animacionAtacar();
     }
 
     public void setMovimiento(Movimiento mov)
