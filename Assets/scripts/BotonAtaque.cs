@@ -10,7 +10,7 @@ using Button = UnityEngine.UI.Button;
 public class BotonAtaque : MonoBehaviour
 {
 
-    public Button ataque;
+   /* public Button ataque;
     private Jugador jugadorActual; // El jugador asociado al turno actual
     private Movimiento movimiento; // Indica el movimiento que realizará el jugador
     private bool turno; // Indica el turno del jugador actual
@@ -87,6 +87,6 @@ public class BotonAtaque : MonoBehaviour
     public void setMovimiento(Movimiento mov)
     {
         movimiento = mov;
-    }
+    }*/
 }
 

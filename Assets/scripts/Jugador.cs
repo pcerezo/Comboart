@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DefaultNamespace;
@@ -10,26 +11,29 @@ public class Jugador : MonoBehaviour
     private Personaje personaje;
     // Variables de combate
     public GameObject flecha;
-    public GameObject barraVida;
     private GameObject jugador_g_o;
-    private Slider slider;
-    private float danio;
+    private Animator animator;
+    private float danioFisico, danioMagico;
     private bool terminado, ejecutar; // Variable para indicar si terminó de escoger
     private Movimiento ultimoMovimiento; // Variable para guardar el próximo movimiento a ejecutar
     private float timer; // Variable para controlar el tiempo de animación
+    private int numero;
 
     public Jugador(int numero)
     {
-        this.jugador_g_o = jugador_g_o;
+        String jugador="";
+        this.numero = numero;
         // Dependiendo de qué número tenga, se le asigna un personaje u otro
         print("Constructor de jugador");
-        switch (numero)
+        switch (this.numero)
         {
             case 0:
                 personaje = new HeroKnight();
+                jugador = "Jugador1";
                 break;
             case 1:
                 personaje = new MedievalWarrior();
+                jugador = "Jugador2";
                 break;
         }
 
@@ -39,8 +43,9 @@ public class Jugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        slider = barraVida.GetComponent<Slider>();
-        barraVida.SetActive(true);
+        /*slider.maxValue = personaje.getVidaMaxima();
+        slider.value = personaje.getVida();*/
+        //barraVida.SetActive(true);
         timer = 0;
         flecha.SetActive(false);
         terminado = false;
@@ -49,7 +54,7 @@ public class Jugador : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        barraVida.SetActive(true);
+        //barraVida.SetActive(true);
         //slider.value = personaje.getVida();
 
         //Cuando termine de atacar, que vuelva a la animación IDLE
@@ -77,14 +82,50 @@ public class Jugador : MonoBehaviour
         
     }
 
-    public void setDanio(float danio)
+    /**
+     * Actualizamos la vida y características del jugador
+     */
+    public void actualizar()
     {
-        this.danio = danio;
+
     }
 
-    public float getDanio()
+    public void setDanioFisico(float danio)
     {
-        return danio;
+        danioFisico = danio;
+    }
+
+    public float getDanioFisico()
+    {
+        return danioFisico;
+    }
+    
+    public void setDanioMagico(float danio)
+    {
+        this.danioMagico = danio;
+    }
+
+    public float getDanioMagico()
+    {
+        return danioMagico;
+    }
+
+    /**
+     * Recibe daño físico y calcula la vida que se resta
+     * según la defensa física
+     */
+    public void recibirDanioFisico(float danio)
+    {
+        float danioRecibido = danio; // personaje.getDefensaFisica();
+
+        personaje.reducirVida(danioRecibido);
+    }
+
+    public void recibirDanioMagico(float danio)
+    {
+        float danioRecibido = danio; // personaje.getDefensaMagica();
+
+        personaje.reducirVida(danioRecibido);
     }
 
     public void setTerminado(bool terminado)
@@ -149,6 +190,26 @@ public class Jugador : MonoBehaviour
                 personaje = new MedievalWarrior();
                 break;
         }
+    }
+
+    public float getVelocidad()
+    {
+        return personaje.getVelocidad();
+    }
+
+    public void subirAtaqueFisico(float subida)
+    {
+        personaje.subirAtaqueFisico(subida);
+    }
+
+    public void subirDefensaFisica(float subida)
+    {
+        personaje.subirDefensaFisica(subida);
+    }
+
+    public void subirVelocidad(float subida)
+    {
+        personaje.subirVelocidad(subida);
     }
 
     public GameObject getGameObject()
