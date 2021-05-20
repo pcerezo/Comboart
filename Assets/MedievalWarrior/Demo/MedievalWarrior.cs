@@ -16,7 +16,7 @@ public class MedievalWarrior : Personaje
         velocidad = 10;
         Movimiento espadazo = new Movimiento("Espadazo 4", 5, "ataque_fisico");
         Movimiento tajo = new Movimiento("Tajo rápido", 2, "ataque_fisico");
-        Movimiento espadazo2 = new Movimiento("Espadazo 5", 8, "ataque_fisico");
+        Movimiento espadazo2 = new Movimiento("Espadazo 5", 20, "ataque_fisico");
         Movimiento escudo = new Movimiento("Escudo", 5, "subir_defensa_fisica");
         
         movimientos = new Movimiento[] {espadazo, espadazo2, tajo, escudo};

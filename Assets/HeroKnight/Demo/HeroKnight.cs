@@ -37,7 +37,7 @@ public class HeroKnight : Personaje {
         //m_animator.runtimeAnimatorController = Resources.Load<RuntimeAnimatorController>("Assets/MedievalWarrior/Animations/Idle_0");
         Movimiento espadazo = new Movimiento("Espadazo 1", 5, "ataque_fisico");
         Movimiento tajo = new Movimiento("Tajo rápido", 2, "ataque_fisico");
-        Movimiento espadazo2 = new Movimiento("Espadazo 2", 8, "ataque_fisico");
+        Movimiento espadazo2 = new Movimiento("Espadazo 2", 10, "ataque_fisico");
         Movimiento escudo = new Movimiento("Escudo", 5, "subir_defensa_fisica");
         
         movimientos = new Movimiento[] {espadazo, espadazo2, tajo, escudo};

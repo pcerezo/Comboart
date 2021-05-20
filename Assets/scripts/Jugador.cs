@@ -10,7 +10,6 @@ public class Jugador : MonoBehaviour
     // Hay que saber qué personaje manejamos
     private Personaje personaje;
     // Variables de combate
-    public GameObject flecha;
     private GameObject jugador_g_o;
     private Animator animator;
     private float danioFisico, danioMagico;
@@ -21,7 +20,6 @@ public class Jugador : MonoBehaviour
 
     public Jugador(int numero)
     {
-        String jugador="";
         this.numero = numero;
         // Dependiendo de qué número tenga, se le asigna un personaje u otro
         print("Constructor de jugador");
@@ -29,25 +27,20 @@ public class Jugador : MonoBehaviour
         {
             case 0:
                 personaje = new HeroKnight();
-                jugador = "Jugador1";
                 break;
             case 1:
                 personaje = new MedievalWarrior();
-                jugador = "Jugador2";
                 break;
         }
 
         terminado = false;
         print("Personaje construído");
     }
+    
     // Start is called before the first frame update
     void Start()
     {
-        /*slider.maxValue = personaje.getVidaMaxima();
-        slider.value = personaje.getVida();*/
-        //barraVida.SetActive(true);
         timer = 0;
-        flecha.SetActive(false);
         terminado = false;
     }
 
@@ -70,16 +63,6 @@ public class Jugador : MonoBehaviour
         {
             animacionIDLE();
         }*/
-    }
-
-    public void mostrarFlecha(bool mostrar)
-    {
-        flecha.SetActive(mostrar);
-    }
-
-    public void mostrarBarraVida()
-    {
-        
     }
 
     /**
