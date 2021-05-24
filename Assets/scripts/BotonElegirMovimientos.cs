@@ -27,4 +27,9 @@ public class BotonElegirMovimientos : MonoBehaviour
     {
         return mostrar;
     }
+
+    public void setMostrar(bool mostrar)
+    {
+        this.mostrar = mostrar;
+    }
 }

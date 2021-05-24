@@ -19,23 +19,26 @@ public class Combate : MonoBehaviour
     public GameObject j1_obj, j2_obj;
     public GameObject j1_nombre, j2_nombre;
     // Botón para desplegar los movimientos del personaje y el gameobject que contiene los botones
-    public GameObject botonMostrarMovimientos, movimientos_obj;
+    public GameObject botonMostrarMovimientos, botonMostrarObjetos, movimientos_obj;
     // script que controla la muestra de la lista de movimientos
     private BotonElegirMovimientos botonMostrarMovimientos_script;
+    private BotonElegirObjetos botonMostrarObjetos_script;
     public Slider j1_slider, j2_slider;
     public GameObject tarjetJ1, tarjetJ2;
     public GameObject panel;
-    private GameObject[] botones_g_o;
+    private GameObject[] movimientos_g_o, objetos_g_o;
     private BotonMovimiento[] botonesMovimiento;
     private Jugador jugadorActual;
     private bool turno; //true: jugador1, false: jugador2
     private bool animaciones = false; // Controlamos que ocurran las animaciones o no
-
+    bool mostrarMovimientos, mostrarObjetos; // Controlamos que se muestren los objetos o los movimientos
+    private bool clickado = false;
     
     // Start is called before the first frame update
     void Start()
     {
         print("Voy a empezar");
+        mostrarMovimientos = mostrarObjetos = false;
         turno = true;
         textoVictoria.gameObject.SetActive(false);
         textoRonda.text = "Ronda 1";
@@ -57,15 +60,22 @@ public class Combate : MonoBehaviour
         // Cuando se pulse el botón 'Movimientos' se mostrarán u ocultarán
         // los movimientos de cada personaje
         // Máximo de 6 movimientos
-        botones_g_o = new GameObject[6];
+        movimientos_g_o = new GameObject[6];
+        objetos_g_o = new GameObject[6];
         botonesMovimiento = new BotonMovimiento[6];
         // Asignamos los botones gameobject
-        for (int i = 1; i <= botones_g_o.Length; i++)
+        for (int i = 1; i <= movimientos_g_o.Length; i++)
         {
-            botones_g_o[i-1] = GameObject.Find("mov"+i);
+            movimientos_g_o[i-1] = GameObject.Find("mov"+i);
+        }
+        
+        for (int i = 1; i <= objetos_g_o.Length; i++)
+        {
+            objetos_g_o[i-1] = GameObject.Find("obj"+i);
         }
         
         botonMostrarMovimientos_script = botonMostrarMovimientos.GetComponent<BotonElegirMovimientos>();
+        botonMostrarObjetos_script = botonMostrarObjetos.GetComponent<BotonElegirObjetos>();
         print("Empieza la rutina");
         StartCoroutine(elegir());
     }
@@ -88,9 +98,54 @@ public class Combate : MonoBehaviour
             tarjetJ2.SetActive(!turno);
         }
 
-        for (int i = 0; i < jugadorActual.getNumeroMovimientos(); i++) {
-            botones_g_o[i].SetActive(botonMostrarMovimientos_script.getMostrar());
+        if (Input.GetMouseButtonDown(0))
+        {
+            clickado = !clickado;
+            // Controlamos que la función no se repita erróneamente
+            if (!clickado) {
+                print("Ratón pulsado");
+                if (EventSystem.current.currentSelectedGameObject == botonMostrarMovimientos)
+                {
+                    print("MostrarMovimientos antes = " + mostrarMovimientos);
+                    if (mostrarMovimientos == false)
+                    {
+                        mostrarMovimientos = true;
+                        mostrarObjetos = false;
+                    }
+
+                    else
+                    {
+                        mostrarMovimientos = !mostrarMovimientos;
+                    }
+                    print("MostrarMovimientos ahora = " + mostrarMovimientos);
+                }
+                else if (EventSystem.current.currentSelectedGameObject == botonMostrarObjetos)
+                {
+                    print("mostrarObjetos antes = " + mostrarObjetos);
+                    if (mostrarObjetos == false)
+                    {
+                        mostrarMovimientos = false;
+                        mostrarObjetos = true;
+                    }
+
+                    else
+                    {
+                        mostrarObjetos = false;
+                    }
+                    print("mostrarObjetos ahora = " + mostrarObjetos);
+                }
+            }
         }
+
+        for (int i = 0; i < jugadorActual.getNumeroMovimientos(); i++) {
+            movimientos_g_o[i].SetActive(mostrarMovimientos);
+        }
+        
+        // TODO: getNumeroObjetos()
+        for (int i = 0; i < jugadorActual.getNumeroMovimientos(); i++) {
+            objetos_g_o[i].SetActive(mostrarObjetos);
+        }
+        
     }
 
     IEnumerator elegirMovimiento()
@@ -123,14 +178,14 @@ public class Combate : MonoBehaviour
             dialogo.SetText(turnoJugador + ": selecciona una acción");
             dialogo.gameObject.SetActive(true);
             // Mostramos los botones con sus ataques
-            for (int i = 0; i < botones_g_o.Length; i++)
+            for (int i = 0; i < movimientos_g_o.Length; i++)
             {
                 aux = i + 1;
                 //print("Número de movimientos: " + jugadorActual.getNumeroMovimientos());
                 if (i < num)
                 {
-                    botones_g_o[i].AddComponent<BotonMovimiento>().actualizar(i, jugadorActual.getMovimiento(i), ref jugadorActual);
-                    botones_g_o[i].SetActive(true);
+                    movimientos_g_o[i].AddComponent<BotonMovimiento>().actualizar(i, jugadorActual.getMovimiento(i), ref jugadorActual);
+                    movimientos_g_o[i].SetActive(true);
                     //botonesMovimiento[i] = new BotonMovimiento(i, jugadorActual.getMovimiento(i), ref jugadorActual);
                     GameObject.Find("Texto_mov" + aux).GetComponent<TextMeshProUGUI>()
                         .SetText(jugadorActual.getMovimiento(i).getNombre());
@@ -138,7 +193,7 @@ public class Combate : MonoBehaviour
                 else
                 {
                     // Si el personaje no tiene más movimientos ocultamos los botones
-                    botones_g_o[i].SetActive(false);
+                    movimientos_g_o[i].SetActive(false);
                 }
             }
             print("Botones creados");
@@ -152,9 +207,9 @@ public class Combate : MonoBehaviour
             }
             print("getTerminado = true");
             // Ahora deshabilitamos los botones para que no sean pulsados otra vez
-            for (int i = 0; i < botones_g_o.Length; i++)
+            for (int i = 0; i < movimientos_g_o.Length; i++)
             {
-                foreach (var comp in botones_g_o[i].GetComponents<BotonMovimiento>())
+                foreach (var comp in movimientos_g_o[i].GetComponents<BotonMovimiento>())
                 {
                     DestroyImmediate(comp);
                 }
