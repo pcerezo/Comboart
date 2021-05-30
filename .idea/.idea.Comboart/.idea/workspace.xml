@@ -4,95 +4,458 @@
     <list default="true" id="bbdf6d45-0611-44f5-a11b-a7dc5632c387" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Comboart/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Comboart/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Animacion.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Animacion.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonAtaque.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonAtaque.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonElegirMovimientos.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonElegirMovimientos.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonElegirObjetos.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonElegirObjetos.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonMovimiento.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/BotonMovimiento.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Combate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Combate.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Jugador.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Jugador.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Movimiento.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Movimiento.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Personaje.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/Personaje.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/atacar.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/scripts/atacar.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/DemoSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/DemoSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior AI.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior AI.ai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior EPS.eps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior EPS.eps.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/attack_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/attack_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/attack_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/attack_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/attack_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/attack_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_ATK_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_ATK_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_ATK_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_ATK_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_ATK_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/crouch_ATK_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_001.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_002.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_003.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_004.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_005.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_006.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_007.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_008.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_009.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/die_010.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/dizzy_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/dizzy_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/dizzy_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/dizzy_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/dizzy_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/dizzy_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/flyKick_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/hurt_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/hurt_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/hurt_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/hurt_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/idle_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jumpATK_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jumpATK_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jumpATK_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jumpATK_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jumpATK_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jumpATK_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jump_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jump_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jump_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/jump_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/strike_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/walk_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/win_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/win_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/win_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Dragon Warrior PNG/win_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/dashwind_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/explosion_06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/fireball_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/fireball_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/fireball_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/fireball_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/fireball_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/fireball_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/iblast_01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/iblast_01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/iblast_02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/iblast_02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/iblast_03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/iblast_03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/particlel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/particlel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/potion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Effects/potion.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Read Me.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dragon Warrior Files/Read Me.txt.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/BlockFlash.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/BlockFlash.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/BlockFlash_AnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/BlockFlash_AnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_AnimController.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_AnimController.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Attack1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Attack1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Attack2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Attack2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Attack3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Attack3.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Block.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Block.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_BlockIdle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_BlockIdle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_BlockNoEffect.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_BlockNoEffect.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_DeathNoBlood.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_DeathNoBlood.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Fall.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Fall.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Hurt.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Hurt.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_IdleBlock.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_IdleBlock.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_LedgeGrab.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_LedgeGrab.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Roll.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Roll.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_WallSlide.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/HeroKnight_WallSlide.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/SlideDust.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/SlideDust.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/SlideDust.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Animations/SlideDust.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/ColorSwap.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/ColorSwap.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/ColorSwap_HeroKnight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/ColorSwap_HeroKnight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/Sprites-ColorSwap.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/Sprites-ColorSwap.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/swap_texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/ColorSwap/swap_texture.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/BlockFlash.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/BlockFlash.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/DestroyEvent_HeroKnight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/DestroyEvent_HeroKnight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight_Green.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight_Green.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight_Yellow.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/HeroKnight_Yellow.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/Sensor_HeroKnight.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/Sensor_HeroKnight.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/SlideDust.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Demo/SlideDust.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentPalette_HeroKnight.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentPalette_HeroKnight.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_0.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_0.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_1.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_1.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_2.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_2.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_3.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/EnvironmentTiles_3.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/Walls_noFriction.physicsMaterial2D" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Environment/Walls_noFriction.physicsMaterial2D.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Background.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/BlockFlash.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/BlockFlash.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/EnvironmentTiles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/EnvironmentTiles.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Fondo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Fondo.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/HeroKnight.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/HeroKnight.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/HeroKnight_DeathNoBlood.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/HeroKnight_DeathNoBlood.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/HeroKnight_IDLE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/HeroKnight_IDLE.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Materials/Fondo.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/Materials/Fondo.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/SlideDust.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/SlideDust.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/Ataque_fisico.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/Ataque_fisico.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect_0 1.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect_0 1.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/Moverse.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/Moverse.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/New Animation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeroKnight/Sprites/animaciones/New Animation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Animator_medieval_warrior.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Animator_medieval_warrior.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack1_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack1_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack2_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack2_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack3.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack3.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack3_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack3_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack4.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack4.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack4_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Attack4_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Death.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Death.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Death_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Death_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Fall.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Fall.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Fall_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Fall_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Idle_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Idle_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Jump.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Jump.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Jump_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Jump_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Run.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Run.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Run_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Run_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Take Hit.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Take Hit.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Take Hit_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Animations/Take Hit_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Demo.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Demo/MedievalWarrior.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Demo/MedievalWarrior.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Demo/Scene Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Demo/Scene Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Attack4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Death.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Death.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Fall.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Fall.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Idle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Idle.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Jump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Jump.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Run.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Run.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Take Hit - white silhouette.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Take Hit - white silhouette.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Take Hit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MedievalWarrior/Sprites/Take Hit.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/EscenaCombate.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/EscenaCombate.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/EscenaCombate/Combate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/EscenaCombate/Combate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/scripts/SeleccionPersonaje/SeleccionSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/scripts/SeleccionPersonaje/SeleccionSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/05/051960136d2af8b603f03d50a92543f2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/06/06ca3b63ece5c85da1e13f42bdbd6b7e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/08/08764d9261633d89c98f2f42c75ff37c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0f/0f3c74c26f1f521e8a9e717fffb7fa7c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/12/123ed13bfe8a5fe6103a01f39660e506" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/13/13346cb13daa1d4426f41602c0ec4410" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/16/16c3ef14a1f6b84ecd653812fe03ce22" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/23/23164347be75df8004d9b3b3600d7e40" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/24/244e2079e8053ca3b99bf275da652292" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/25/25e07902532513d4684fd8ef66d8fbf6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2c/2cbfee8498bae34eeeeca6498ca77c1f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/30/30eaac250a83b7ebbba8bbeec786165c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/36/364bcbb6942307b2c02f5f3f3b7db36c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3a/3a58b96ed09f30e75a9aeed7ecb98af7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4d/4de0f63864a3069cfad48a55b196dee5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4e/4e9b339eeb92d7b76c10250d0c42a9da" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/50/5084a8bf7c5e20084683a716d3c8014e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/52/52b70b616a70eea4b35d67425ee5b639" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/56/56f1515f803abadaa6a39a8baf8fe8e7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5c/5c8aecb7c76bbe72716fb9290ce2a938" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5c/5cbd0d93a1d5c2a0b747b14a89201d08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5f/5f193c1b2cff62d3ceaa735b945d1518" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/61/61931bef42593df688b21581cbb9efec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/66/668cc21f366a1324e530f6f1e89f5c32" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6a/6a8fff028bd99c614f972de8127f4255" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7a/7ada238439b2e295fb54017966c1732e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7c/7cfc9d24352a8676bb6802f81f17bd43" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7f/7f0991e829866a47b3b5b63dd1767d58" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/8b/8bbe4452d756a38b9dd717452a7a6362" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/96/96b966f647c7730e4aeedf0039d4e24c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9b/9b0949b37cc80e537ed26eeedc8baa5e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a9/a9395d439694dd53ef32aca07c4f0946" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a9/a9a46e17efdc96886b78b398f35a0f6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ac/acf071dd90b37566cea954809588d0a4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b0/b0f20b5084e5fa38ccf757d6d159ffcf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bf/bfeac846bbc189042bb597907b9984c8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c3/c301123e51439d301bc77f969222542a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c5/c53f44da360e9140fef9cfff6d3e0ab4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c8/c882539ee2d9464e9bbd21d6e240a9b9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cc/cc336474c456355b005905fc50569bfb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ce/ce18c77fe883702b346b5e04ccdcfb95" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ce/ceca1b3da5eca52d44f9964895d7992e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d0/d015fd716656dfc90bdff0c0b67b2274" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d3/d352d53a8d6d5b4c1d82da5097652391" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d4/d46cc467e70fc1be5776b0eb7a16f87a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d7/d7690f67c9beaf524639128d4b0e10c2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e2/e27f0575b6aeecc289bdb9e952140bdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e6/e6ef3f96041110fca59c7385eadf0efb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ed/ed1fbad0c380283c2da13d82a1b70223" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ed/ede58ce6ac64a473039cebe288436189" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f2/f2038ae4a7f0cccf8abeb7f88193938b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fa/fa3b13397af1a33a9e16ec225293514c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/01/01bc461b8bc56b40c250b8ad41dfffb4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/04/0448e3dd751968c81e814dee4d18057d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/08/08b6fa3d4a5a71ec7f0bae5fece07a8c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0a/0a38c45a2ded3689a58ecff18aeb2c8c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0a/0a85fab5722f002f108d88c4ea9e18a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0c/0cded75423329b57c09a1bcdf8c91798" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/0f/0f64dd5b0e3413027679e54e608221f9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/11/1173dce37e545f219b5bd0f48a0e6fed" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/13/130243eba786b69a3e9a74961b576fa5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/13/1316e2ab4d866e4be88103470bdcb7a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/13/1346a8d641b29aeadafa8e3e05b5b9f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/14/14d4a250f66b0ca9aea7e94b39b3e5d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/15/155985969a2528b342ab55343341ef47" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/17/17ad41f63d794e0cfc6ee326df4e0129" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/24/24685dc61e0ba456743c9ea1011ddd22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/26/266178de68140cfa74402644aa08eb5e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/28/28dd33ddbb18697c7d7a2e7e4e44f272" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2a/2a8e41d0abfe301a0ea270e451dd7a4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/30/30b5897904b8e72ee634dc208597363e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3b/3b5bbf2c8ef0886ea1b146ab3a24e759" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/3d/3dd40da4aa118cff49ba1d13592bb8ea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/40/40134bb7a56b8df4d11c0043e77fa4fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/41/41293b05f4be00b12af05764ce8dc675" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/42/421934f792362e0333e8387387aa5f78" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/43/4302b7daf930c9f888535e520a82b952" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/44/444f04e5433981b691bd6641e9791223" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/46/463f99a0c3b3c2bc2e359e8d247ba96d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/46/46c033d6ead02d8249877ca541fbf9bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/48/48c8309a2daa72510b1ad4fef7b10408" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4b/4bfad681c6fbf85f5d0a1332cfda7958" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4b/4bfba23643f28bac070be696fd1778d7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4c/4cab54ee4ca386e5ad017578af9ff4f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/4d/4d00d224e09457a27e9249bb3cd9e7f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/50/50b283d6e8f1ba26f90964205aaf101f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/50/50d1e703de76aee2823755342119f413" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/51/51e0853b530bd988991c7ddbf3b3e8d0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5a/5a77a8f1de940349ed94a9d52238de9a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5a/5a9c2e5a8d1e7139730a939117cda73a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5b/5bf4b5ca9958d868ed56502caa4d842a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5f/5fb31dfcd39929dca40550bb76fd557f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/5f/5fd0033cd6a4a13b2034e183f7d8e8f4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/60/605076438d62a9d64f4999eb91991e62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/60/60bbf33e21bb2d25663325e26938d897" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/62/625da8393d8d5185c1b271ab121236bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/64/64e34ece66d9621dc4997f2cd66d9f72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/67/67411793f9f64ad5c7f6875be9c50e30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6e/6e4945d70ad5381c69ee3538a3900531" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6f/6f404510ac65e084797cf38a87223bf9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/77/77f806c119d3a3c77701ce3597c7bcfc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7b/7b379441d68fca7d5b4b3cbb272f7299" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/82/82ded0bf087133c4fea9ffaf67d31f5d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/84/84291bc82d2a5252bc2b799bc32dff24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/85/856df976c851765c6e732cf9eb06f85b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/86/862e26bf77ad812ac7c3322388f3b0c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/88/888962b54d475c7763fc76cf109cd16d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/96/96319b551cf821ac6691cf60196f7704" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9c/9c4554d11b86b91f71a6588550df63f4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9c/9cc0a474109b6ca1dd108a474f556214" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9f/9fc57087f6d34f678e3c0a2adac99aba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a0/a0aec9fffcf8c0d8ae4d52690cc5698c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a0/a0b167a863697cb52bc63ae9ed1967b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a1/a126a8593690d8bf008dc8a8e5597cd0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a4/a4bd69607d6f726ff2ed104f94aa00f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/a5/a5261f94ea6b431edd4d1d74d9331c5b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b5/b59a95b807ef9d092dd0ea7503b652a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bb/bbc90a5480a900670ced7628646cc447" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bc/bc57aed9d31bf454aad785d22247d6b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bc/bce3fc15f72c126edba5c227655aab84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/be/be8263b0b0d1539b567d571ba894fc0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c1/c180dec88aefc40bd41c4671d72f41e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c4/c42ef2d178015c589dbb4bd1430f46a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c5/c578da82d62a979798ff2daae4e4ff66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/cf/cf7747b93b3e73b4ac3090a0cec9c3d0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d0/d093ba2d860d2f6e89d578e0c4651477" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d1/d1220d5e42f5588003ff4e246ce0dafc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d4/d41a714ec217578a6db03b28cf991807" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d7/d78a6103617a1072eb61c810f11a2759" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d9/d955b69e988496f4ea85839cd5762865" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e0/e02547e06b685fbb40ce3a1c2eb40bfd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e1/e123e822e196a4f1c10d11543c1ecb4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e9/e970ee9bc6f84ee0661d11da7d1bde1e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e9/e9d13415d75ac0a80147c32a4404b53e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ef/ef5fd7991a25698f2a880a826fa03738" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ef/efc2b1d1932d2d6eccbeba90c070a513" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f7/f7b96f6bd3a7febba7f74383274826f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fa/fa8494133ceee00e6fd2f5a975fce39a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/fa/faef590a54eaa04b110acfb9146dbb6b" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c/8cd7c613bf844de3b80696e27a479d5e.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -133,6 +496,7 @@
       <option value="$PROJECT_DIR$/Assets/scripts/Combate.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/SeleccionPersonaje/BotonPersonaje.cs" />
       <option value="$PROJECT_DIR$/Assets/scripts/SeleccionPersonaje/SeleccionSystem.cs" />
+      <option value="$PROJECT_DIR$/Assets/scripts/EscenaCombate/Combate.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1s28C3ksXpV2FdSnJq6s7SqK19H" />
@@ -191,7 +555,8 @@
       <workItem from="1621505462101" duration="6850000" />
       <workItem from="1621525382845" duration="3811000" />
       <workItem from="1621876121067" duration="8360000" />
-      <workItem from="1621935986351" duration="16128000" />
+      <workItem from="1621935986351" duration="16209000" />
+      <workItem from="1622403535675" duration="6826000" />
     </task>
     <task id="LOCAL-00001" summary="creando subclases para cada personaje">
       <created>1620681249353</created>

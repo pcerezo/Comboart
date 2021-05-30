@@ -33,6 +33,7 @@ public class Combate : MonoBehaviour
     private bool animaciones = false; // Controlamos que ocurran las animaciones o no
     bool mostrarMovimientos, mostrarObjetos; // Controlamos que se muestren los objetos o los movimientos
     private bool clickado = false;
+    private String personajeJ1, personajeJ2;
     
     // Start is called before the first frame update
     void Start()
@@ -43,8 +44,9 @@ public class Combate : MonoBehaviour
         textoVictoria.gameObject.SetActive(false);
         textoRonda.text = "Ronda 1";
         textoRonda.gameObject.SetActive(true);
-        j1 = new Jugador(0);    // HeroKnight
-        j2 = new Jugador(1);    // MedievalWarrior
+        
+        // Cargamos los sprites de ambos jugadores según lo que eligieron antes
+        cargarSprites();
 
         jugadorActual = j1;
         print("Jugadores inicializados");
@@ -146,6 +148,44 @@ public class Combate : MonoBehaviour
             objetos_g_o[i].SetActive(mostrarObjetos);
         }
         
+    }
+    
+    // Función para cargar los sprites correspondientes según el personaje elegido
+    public void cargarSprites()
+    {
+        // Apuntamos a los sprites de los jugadores
+        SpriteRenderer sp1 = j1_obj.GetComponent<SpriteRenderer>();
+        SpriteRenderer sp2 = j2_obj.GetComponent<SpriteRenderer>();
+        
+        // Cargamos sprite para el jugador 1 según lo que haya escogido
+        switch (PlayerPrefs.GetString("Personaje_J1"))
+        {
+            case "Hero Knight":
+                print("He escogido Hero Knight");
+                sp1.sprite = Resources.Load<Sprite>("HeroKnight/Sprites/HeroKnight_IDLE");
+                j1 = new Jugador(0);    // HeroKnight
+                break;
+            case "Medieval Warrior":
+                print("He escogido Medieval Warrior");
+                sp1.sprite = Resources.Load<Sprite>("MedievalWarrior/Sprites/Idle");
+                j1 = new Jugador(1);    // MedievalWarrior
+                break;
+        }
+        
+        // Cargamos sprite para el jugador 1 según lo que haya escogido
+        switch (PlayerPrefs.GetString("Personaje_J2"))
+        {
+            case "Hero Knight":
+                print("He escogido Hero Knight");
+                sp2.sprite = Resources.Load<Sprite>("HeroKnight/Sprites/HeroKnight_IDLE");
+                j2 = new Jugador(0);    // HeroKnight
+                break;
+            case "Medieval Warrior":
+                print("He escogido Medieval Warrior");
+                sp2.sprite = Resources.Load<Sprite>("MedievalWarrior/Sprites/Idle");
+                j2 = new Jugador(1);    // MedievalWarrior
+                break;
+        }
     }
 
     IEnumerator elegirMovimiento()

@@ -12,7 +12,7 @@ public class SeleccionSystem : MonoBehaviour
     //private int personaje1, personaje2;
     private int jugadorEligiendo;
     private bool terminado_j1, terminado_j2, escogidos;
-    private String nombre;
+    private String personajeJ1, personajeJ2;
     private GameObject[] listaPersonajes;
 
     public GameObject botonJugar;
@@ -48,6 +48,8 @@ public class SeleccionSystem : MonoBehaviour
                     // Esperamos a que todos los jugadores escojan su personaje
                     print("Los jugadores han escogido");
                     // Cargar escena de combate
+                    PlayerPrefs.SetString("Personaje_J1", personajeJ1);
+                    PlayerPrefs.SetString("Personaje_J2", personajeJ2);
                     SceneManager.LoadScene("EscenaCombate");
                 }
             }
@@ -58,21 +60,22 @@ public class SeleccionSystem : MonoBehaviour
                 {
                     if (listaPersonajes[i].GetComponent<BotonPersonaje>().getPulsado())
                     {
-                        nombre = listaPersonajes[i].transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>()
-                            .text;
-
                         // Si no ha seleccionado aún el j1, se lo asignamos
                         if (!terminado_j1)
                         {
+                            personajeJ1 = listaPersonajes[i].transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>()
+                                .text;
                             GameObject.Find("SeleccionJ1").transform.GetChild(0).gameObject
-                                .GetComponent<TextMeshProUGUI>().SetText(nombre);
+                                .GetComponent<TextMeshProUGUI>().SetText(personajeJ1);
                             terminado_j1 = true;
                         }
                         // Falta el jugador 2 por asignar
                         else
                         {
+                            personajeJ2 = listaPersonajes[i].transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>()
+                                .text;
                             GameObject.Find("SeleccionJ2").transform.GetChild(0).gameObject
-                                .GetComponent<TextMeshProUGUI>().SetText(nombre);
+                                .GetComponent<TextMeshProUGUI>().SetText(personajeJ2);
                             terminado_j2 = true;
                         }
                     }
