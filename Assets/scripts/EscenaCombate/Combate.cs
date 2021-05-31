@@ -158,32 +158,42 @@ public class Combate : MonoBehaviour
         SpriteRenderer sp2 = j2_obj.GetComponent<SpriteRenderer>();
         
         // Cargamos sprite para el jugador 1 según lo que haya escogido
-        switch (PlayerPrefs.GetString("Personaje_J1"))
+        switch (PlayerPrefs.GetInt("Personaje_J1"))
         {
-            case "Hero Knight":
+            case 0:
                 print("He escogido Hero Knight");
                 sp1.sprite = Resources.Load<Sprite>("HeroKnight/Sprites/HeroKnight_IDLE");
                 j1 = new Jugador(0);    // HeroKnight
                 break;
-            case "Medieval Warrior":
+            case 1:
                 print("He escogido Medieval Warrior");
                 sp1.sprite = Resources.Load<Sprite>("MedievalWarrior/Sprites/Idle");
                 j1 = new Jugador(1);    // MedievalWarrior
                 break;
+            case 3:
+                print("He escogido a Goku");
+                sp1.sprite = Resources.Load<Sprite>("Goku/Sprites/Goku_idle");
+                j1 = new Jugador(3);    // MedievalWarrior
+                break;
         }
         
         // Cargamos sprite para el jugador 1 según lo que haya escogido
-        switch (PlayerPrefs.GetString("Personaje_J2"))
+        switch (PlayerPrefs.GetInt("Personaje_J2"))
         {
-            case "Hero Knight":
+            case 0:
                 print("He escogido Hero Knight");
                 sp2.sprite = Resources.Load<Sprite>("HeroKnight/Sprites/HeroKnight_IDLE");
                 j2 = new Jugador(0);    // HeroKnight
                 break;
-            case "Medieval Warrior":
+            case 1:
                 print("He escogido Medieval Warrior");
                 sp2.sprite = Resources.Load<Sprite>("MedievalWarrior/Sprites/Idle");
                 j2 = new Jugador(1);    // MedievalWarrior
+                break;
+            case 3:
+                print("He escogido a Goku");
+                sp2.sprite = Resources.Load<Sprite>("Goku/Sprites/Goku_idle");
+                j1 = new Jugador(3);
                 break;
         }
     }

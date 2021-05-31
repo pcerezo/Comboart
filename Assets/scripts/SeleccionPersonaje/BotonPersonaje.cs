@@ -34,6 +34,9 @@ public class BotonPersonaje : MonoBehaviour
             case 2:
                 print("Dragon Warrior");
                 break;
+            case 3:
+                print("Goku");
+                break;
         }
     }
 
@@ -50,5 +53,10 @@ public class BotonPersonaje : MonoBehaviour
     public bool getPulsado()
     {
         return pulsado;
+    }
+
+    public void setPulsado(bool pulsado)
+    {
+        this.pulsado = pulsado;
     }
 }
