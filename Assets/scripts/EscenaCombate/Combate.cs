@@ -34,11 +34,20 @@ public class Combate : MonoBehaviour
     bool mostrarMovimientos, mostrarObjetos; // Controlamos que se muestren los objetos o los movimientos
     private bool clickado = false;
     private String personajeJ1, personajeJ2;
-    
+
+    private Animator anim1, anim2;
     // Start is called before the first frame update
     void Start()
     {
         print("Voy a empezar");
+        // Cargamos los Animator
+        anim1 = j1_obj.GetComponent<Animator>();
+        anim2 = j2_obj.GetComponent<Animator>();
+
+        // Cargar AnimatorController según el personaje escogido antes. Ejemplo:
+        anim1.runtimeAnimatorController = Resources.Load("Goku/Animations/GOKU_CONTROLLER") as RuntimeAnimatorController;
+        
+        
         mostrarMovimientos = mostrarObjetos = false;
         turno = true;
         textoVictoria.gameObject.SetActive(false);
@@ -96,6 +105,8 @@ public class Combate : MonoBehaviour
         }
         else
         {
+            // Animación IDLE
+            
             tarjetJ1.SetActive(turno);
             tarjetJ2.SetActive(!turno);
         }
