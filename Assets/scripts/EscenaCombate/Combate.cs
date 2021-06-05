@@ -44,10 +44,37 @@ public class Combate : MonoBehaviour
         anim1 = j1_obj.GetComponent<Animator>();
         anim2 = j2_obj.GetComponent<Animator>();
 
-        // Cargar AnimatorController según el personaje escogido antes. Ejemplo:
-        anim1.runtimeAnimatorController = Resources.Load("Goku/Animations/GOKU_CONTROLLER") as RuntimeAnimatorController;
+        // Según el personaje escogido, cargamos un animator u otro
+        switch (PlayerPrefs.GetInt("Personaje_J1"))
+        {
+            case 0:
+                anim1.runtimeAnimatorController = Resources.Load("HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect") as RuntimeAnimatorController;
+                break;
+            case 1:
+                anim1.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR_IDLE") as RuntimeAnimatorController;
+                break;
+            case 2:
+                break;
+            case 3:
+                anim1.runtimeAnimatorController = Resources.Load("Goku/Animations/GOKU_CONTROLLER") as RuntimeAnimatorController;
+                break;
+        }
         
-        
+        switch (PlayerPrefs.GetInt("Personaje_J2"))
+        {
+            case 0:
+                anim2.runtimeAnimatorController = Resources.Load("HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect") as RuntimeAnimatorController;
+                break;
+            case 1:
+                anim2.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR_IDLE") as RuntimeAnimatorController;
+                break;
+            case 2:
+                break;
+            case 3:
+                anim2.runtimeAnimatorController = Resources.Load("Goku/Animations/GOKU_CONTROLLER") as RuntimeAnimatorController;
+                break;
+        }
+
         mostrarMovimientos = mostrarObjetos = false;
         turno = true;
         textoVictoria.gameObject.SetActive(false);
