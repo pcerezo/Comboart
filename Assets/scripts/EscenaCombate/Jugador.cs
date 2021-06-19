@@ -31,6 +31,11 @@ public class Jugador : MonoBehaviour
             case 1:
                 personaje = new MedievalWarrior();
                 break;
+            case 2:
+                personaje = new Ryu();
+                break;
+            case 3:
+                personaje = new Goku();
         }
 
         terminado = false;

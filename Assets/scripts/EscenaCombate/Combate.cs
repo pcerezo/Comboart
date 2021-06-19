@@ -54,6 +54,7 @@ public class Combate : MonoBehaviour
                 anim1.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR_IDLE") as RuntimeAnimatorController;
                 break;
             case 2:
+                anim1.runtimeAnimatorController = Resources.Load("Ryu/Animations/RYU_IDLE") as RuntimeAnimatorController;
                 break;
             case 3:
                 anim1.runtimeAnimatorController = Resources.Load("Goku/Animations/GOKU_CONTROLLER") as RuntimeAnimatorController;
@@ -69,6 +70,7 @@ public class Combate : MonoBehaviour
                 anim2.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR_IDLE") as RuntimeAnimatorController;
                 break;
             case 2:
+                anim2.runtimeAnimatorController = Resources.Load("Ryu/Animations/RYU_IDLE") as RuntimeAnimatorController;
                 break;
             case 3:
                 anim2.runtimeAnimatorController = Resources.Load("Goku/Animations/GOKU_CONTROLLER") as RuntimeAnimatorController;
