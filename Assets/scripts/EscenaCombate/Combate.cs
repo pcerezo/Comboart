@@ -103,6 +103,7 @@ public class Combate : MonoBehaviour
         movimientos_g_o = new GameObject[6];
         objetos_g_o = new GameObject[6];
         botonesMovimiento = new BotonMovimiento[6];
+        
         // Asignamos los botones gameobject
         for (int i = 1; i <= movimientos_g_o.Length; i++)
         {
@@ -184,9 +185,9 @@ public class Combate : MonoBehaviour
         }
         
         // TODO: getNumeroObjetos()
-        for (int i = 0; i < jugadorActual.getNumeroMovimientos(); i++) {
+        /*for (int i = 0; i < jugadorActual.getNumeroMovimientos(); i++) {
             objetos_g_o[i].SetActive(mostrarObjetos);
-        }
+        }*/
         
     }
     
@@ -210,6 +211,11 @@ public class Combate : MonoBehaviour
                 sp1.sprite = Resources.Load<Sprite>("MedievalWarrior/Sprites/Idle");
                 j1 = new Jugador(1);    // MedievalWarrior
                 break;
+            case 2:
+                print("He escogido a Ryu");
+                sp1.sprite = Resources.Load<Sprite>("Ryu/Sprites/Ryu");
+                j1 = new Jugador(2);
+                break;
             case 3:
                 print("He escogido a Goku");
                 sp1.sprite = Resources.Load<Sprite>("Goku/Sprites/Goku_idle");
@@ -230,10 +236,15 @@ public class Combate : MonoBehaviour
                 sp2.sprite = Resources.Load<Sprite>("MedievalWarrior/Sprites/Idle");
                 j2 = new Jugador(1);    // MedievalWarrior
                 break;
+            case 2:
+                print("He escogido a Ryu");
+                sp2.sprite = Resources.Load<Sprite>("Ryu/Sprites/Ryu");
+                j2 = new Jugador(2);
+                break;
             case 3:
                 print("He escogido a Goku");
                 sp2.sprite = Resources.Load<Sprite>("Goku/Sprites/Goku_idle");
-                j1 = new Jugador(3);
+                j2 = new Jugador(3);
                 break;
         }
     }
@@ -372,46 +383,52 @@ public class Combate : MonoBehaviour
         if (j1.getVelocidad() > j2.getVelocidad()) //Primero j1 y después j2
         {
             // Primero ataca el j1
-            j1_obj.GetComponent<Animator>().SetBool("atacando", true);
             // Se actualizan vidas y características:
             ultimoMovimiento = j1.getUltimoMovimiento();
+            anim1.SetBool(ultimoMovimiento.getTipo(), true);
+            yield return new WaitForSeconds(2);
+            anim1.SetBool(ultimoMovimiento.getTipo(), false);
             final = gestionarMovimiento(0, ultimoMovimiento);
             // Animación durante 2 segundos
             yield return new WaitForSeconds(2);
-            j1_obj.GetComponent<Animator>().SetBool("atacando", false);
-            
+
             // Si algún jugador se ha quedado sin vida, salimos
             if (!final)
             {
                 // Después ataca el j2
-                j2_obj.GetComponent<Animator>().SetBool("atacando", true);
                 // Se actualizan vidas y características
                 ultimoMovimiento = j2.getUltimoMovimiento();
+                anim2.SetBool(ultimoMovimiento.getTipo(), true);
+                yield return new WaitForSeconds(2);
+                anim2.SetBool(ultimoMovimiento.getTipo(), false);
                 gestionarMovimiento(1, ultimoMovimiento);
                 yield return new WaitForSeconds(2);
-                j2_obj.GetComponent<Animator>().SetBool("atacando", false);
             }
         }
         else // Primero j2, después j1
         {
             // Primero ataca el j2
-            j2_obj.GetComponent<Animator>().SetBool("atacando", true);
             // Se actualizan vidas y características
             ultimoMovimiento = j2.getUltimoMovimiento();
+            anim2.SetBool(ultimoMovimiento.getTipo(), true);
+            yield return new WaitForSeconds(2);
+            anim2.SetBool(ultimoMovimiento.getTipo(), false);
             final = gestionarMovimiento(1, ultimoMovimiento);
             yield return new WaitForSeconds(2);
-            j2_obj.GetComponent<Animator>().SetBool("atacando", false);
+            
 
             if (!final)
             {
                 // Después ataca el j1
-                j1_obj.GetComponent<Animator>().SetBool("atacando", true);
                 // Se actualizan vidas y características:
                 ultimoMovimiento = j1.getUltimoMovimiento();
+                anim1.SetBool(ultimoMovimiento.getTipo(), true);
+                yield return new WaitForSeconds(2);
+                anim1.SetBool(ultimoMovimiento.getTipo(), false);
                 gestionarMovimiento(0, ultimoMovimiento);
                 // Animación durante 2 segundos
                 yield return new WaitForSeconds(2);
-                j1_obj.GetComponent<Animator>().SetBool("atacando", false);
+                
             }
         }
 

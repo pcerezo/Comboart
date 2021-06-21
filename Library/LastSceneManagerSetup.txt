@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SeleccionPersonaje.unity
+- path: Assets/Scenes/EscenaCombate.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

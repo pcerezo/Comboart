@@ -36,6 +36,7 @@ public class Jugador : MonoBehaviour
                 break;
             case 3:
                 personaje = new Goku();
+                break;
         }
 
         terminado = false;

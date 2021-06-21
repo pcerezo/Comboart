@@ -58,6 +58,7 @@
      <Compile Include="Assets\Flat Platformer Template\Scripts\Paralax.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
+     <Compile Include="Assets\Resources\Ryu\Scripts\Ryu.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\WindMill.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\scripts\EscenaCombate\Jugador.cs" />
@@ -83,6 +84,7 @@
      <Compile Include="Assets\scripts\EscenaCombate\Personaje.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
+     <Compile Include="Assets\Resources\Goku\Scripts\Goku.cs" />
      <Compile Include="Assets\scripts\SeleccionPersonaje\BotonPersonaje.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />

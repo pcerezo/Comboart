@@ -32,7 +32,7 @@ public class BotonPersonaje : MonoBehaviour
                 print("Medieval Warrior");
                 break;
             case 2:
-                print("Dragon Warrior");
+                print("Ryu");
                 break;
             case 3:
                 print("Goku");
