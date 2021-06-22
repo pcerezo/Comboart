@@ -20,6 +20,7 @@ public class Personaje
     public Personaje()
     {
         vidaMax = vida = 100;
+        defensaFisica = defensaMagica = 1;
         Debug.Log("Vida del personaje: " + vida);
     }
 
@@ -32,63 +33,12 @@ public class Personaje
     // Update is called once per frame
     void Update()
     {
-        // Contamos el tiempo mientras se hacen las animaciones
-        /*if (ejecutar)
-        {
-            timer += Time.deltaTime;
-            m_animator.SetBool("atacando", true);
-        }
-        else // En otro caso ponemos el contador de tiempo a 0
-        {
-            timer = 0;
-        }
-        
-        // Si hemos llegado a los 2 segundos de animaciones las terminamos
-        if (timer > 2)
-        {
-            m_animator.SetBool("atacando", false);
-            ejecutar = false;
-            timer = 0;
-        }*/
     }
-
-    /*public void animacionAtacar()
-    {
-        m_animator.SetBool("atacando", true);
-    }
-    
-    public void animacionIDLE()
-    {
-        m_animator.SetBool("atacando", false);
-    }*/
-    
-    /*public void ejecutarAnimaciones()
-    {
-        print("Ejecutando animaciones");
-        ejecutar = true;
-        //animacionAtacar();
-        
-        // Controlamos que hayan pasado unos 3 segundos de animación
-        if (timer > 3)
-        {
-            print("Termina la animación de ataque");
-            ejecutar = false;
-            timer = 0;
-        }
-
-        // y volvemos a la animación de espera
-        animacionIDLE();
-    }*/
 
     public float getVida()
     {
         return vida;
     }
-
-    /*public void setAnimator(Animator animator)
-    {
-        m_animator = animator;
-    }*/
     
     public float getVidaMaxima()
     {
@@ -102,20 +52,47 @@ public class Personaje
         
         this.vida = vida;
     }
-
-    public void reducirVida(float danio)
-    {
-        vida -= danio;
-    }
-
+    
     public void setVidaMax(float vidaMax)
     {
         this.vidaMax = vidaMax;
     }
     
+    public void setAtaqueFisico(float ataque)
+    {
+        ataqueFisico = ataque;
+    }
+
+    public void setAtaqueMagico(float ataque)
+    {
+        ataqueMagico = ataque;
+    }
+
+    public void setDefensaFisica(float defensa)
+    {
+        if (defensa <= 0) defensa = (float)0.5;
+        defensaFisica = defensa;
+    }
+
+    public void setDefensaMagica(float defensa)
+    {
+        if (defensa <= 0) defensa = (float)0.5;
+        defensaMagica = defensa;
+    }
+
+    public void reducirVida(float danio)
+    {
+        vida -= danio;
+    }
+    
     public float getAtaqueFisico()
     {
         return ataqueFisico;
+    }
+
+    public float getAtaqueMagico()
+    {
+        return ataqueMagico;
     }
 
     public float getDefensaFisica()
@@ -126,11 +103,6 @@ public class Personaje
     public float getDefensaMagica()
     {
         return defensaMagica;
-    }
-
-    public void setAtaqueFisico(float ataqueFisico)
-    {
-        this.ataqueFisico = ataqueFisico;
     }
 
     public void subirAtaqueFisico(float subida)

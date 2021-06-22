@@ -1,4 +1,4 @@
-using UnityEditorInternal;
+
 
 namespace DefaultNamespace
 {
@@ -18,6 +18,11 @@ namespace DefaultNamespace
         public string getNombre()
         {
             return nombre;
+        }
+
+        public void setNombre(string nombre)
+        {
+            this.nombre = nombre;
         }
 
         public string getTipo()

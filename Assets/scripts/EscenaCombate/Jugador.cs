@@ -12,7 +12,7 @@ public class Jugador : MonoBehaviour
     // Variables de combate
     private GameObject jugador_g_o;
     private Animator animator;
-    private float danioFisico, danioMagico;
+    private float danioFisico, danioMagico, defensaFisica, defensaMagica;
     private bool terminado, ejecutar; // Variable para indicar si terminó de escoger
     private Movimiento ultimoMovimiento; // Variable para guardar el próximo movimiento a ejecutar
     private float timer; // Variable para controlar el tiempo de animación
@@ -84,36 +84,73 @@ public class Jugador : MonoBehaviour
         danioFisico = danio;
     }
 
+    /**
+     * Devuelve el daño que se produce tras seleccionar un movimiento de ataque físico
+     */
     public float getDanioFisico()
     {
-        return danioFisico;
+        // Se tienen en cuenta tanto el daño del ataque
+        // como la capacidad de daño del personaje
+        return (float)(danioFisico+0.05*personaje.getAtaqueFisico());
     }
     
+    /**
+     * Indica el daño mágico que ejerce
+     * el último movimiento seleccionado de ataque mágico
+     */
     public void setDanioMagico(float danio)
     {
-        this.danioMagico = danio;
-    }
-
-    public float getDanioMagico()
-    {
-        return danioMagico;
+        danioMagico = danio;
     }
 
     /**
-     * Recibe daño físico y calcula la vida que se resta
-     * según la defensa física
+     * Devuelve el daño que se produce tras seleccionar un movimiento de ataque mágico
+     * que es potenciado por la capacidad del personaje
      */
-    public void recibirDanioFisico(float danio)
+    public float getDanioMagico()
     {
-        float danioRecibido = danio; // personaje.getDefensaFisica();
+        return (float)(danioMagico+0.05*personaje.getAtaqueMagico());
+    }
+
+    public void setDefensaFisica(float defensa)
+    {
+        personaje.setDefensaFisica(defensa);
+    }
+
+    public float getDefensaFisica()
+    {
+        return personaje.getDefensaFisica();
+    }
+
+    public void setDefensaMagica(float defensa)
+    {
+        personaje.setDefensaMagica(defensa);
+    }
+
+    public float getDefensaMagica()
+    {
+        return personaje.getDefensaMagica();
+    }
+
+    /**
+     * Recibe daño físico que es atenuado por la defensa física
+     */
+    public void recibirDanioFisico(float danio, float defensa)
+    {
+        float danioRecibido = danio; // /5*defensa;
+        print("defensa: " + defensa + ", daño: " + danio + ", daño recibido: " + danioRecibido);
 
         personaje.reducirVida(danioRecibido);
     }
 
-    public void recibirDanioMagico(float danio)
+    /**
+     * Recibe daño mágico que es atenuado por la defensa mágica
+     */
+    public void recibirDanioMagico(float danio, float defensa)
     {
-        float danioRecibido = danio; // personaje.getDefensaMagica();
-
+        float danioRecibido = danio; // /5*defensa;
+        print("defensa: " + defensa + ", daño: " + danio + ", daño recibido: " + danioRecibido);
+        
         personaje.reducirVida(danioRecibido);
     }
 
@@ -194,6 +231,11 @@ public class Jugador : MonoBehaviour
     public void subirDefensaFisica(float subida)
     {
         personaje.subirDefensaFisica(subida);
+    }
+
+    public void subirDefensaMagica(float subida)
+    {
+        personaje.subirDefensaMagica(subida);
     }
 
     public void subirVelocidad(float subida)

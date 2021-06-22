@@ -285,9 +285,8 @@ public class Combate : MonoBehaviour
                 //print("Número de movimientos: " + jugadorActual.getNumeroMovimientos());
                 if (i < num)
                 {
-                    movimientos_g_o[i].AddComponent<BotonMovimiento>().actualizar(i, jugadorActual.getMovimiento(i), ref jugadorActual);
+                    movimientos_g_o[i].AddComponent<BotonMovimiento>().actualizar(i, turno, jugadorActual.getMovimiento(i), ref jugadorActual);
                     movimientos_g_o[i].SetActive(true);
-                    //botonesMovimiento[i] = new BotonMovimiento(i, jugadorActual.getMovimiento(i), ref jugadorActual);
                     GameObject.Find("Texto_mov" + aux).GetComponent<TextMeshProUGUI>()
                         .SetText(jugadorActual.getMovimiento(i).getNombre());
                 }
@@ -307,15 +306,18 @@ public class Combate : MonoBehaviour
                 yield return null;
             }
             print("getTerminado = true");
+
             // Ahora deshabilitamos los botones para que no sean pulsados otra vez
             for (int i = 0; i < movimientos_g_o.Length; i++)
             {
                 foreach (var comp in movimientos_g_o[i].GetComponents<BotonMovimiento>())
                 {
+                    // Destruimos el botón para que no se solape
+                    // con los del siguiente jugador
                     DestroyImmediate(comp);
                 }
             }
-            //Si ya ha escogido el segundo jugador, indicamos que empezarán las animaciones
+            // Si ya ha escogido el segundo jugador, indicamos que empezarán las animaciones
             if (!turno) animaciones = true;
 
             turno = !turno;
@@ -349,18 +351,22 @@ public class Combate : MonoBehaviour
             case "subir_defensa_fisica":
                 atacante.subirDefensaFisica(movimiento.getPotencia());
                 break;
+            case "subir_defensa_magica":
+                atacante.subirDefensaMagica(movimiento.getPotencia());
+                break;
             case "subir_velocidad":
                 atacante.subirVelocidad(movimiento.getPotencia());
                 break;
             // Ataco al adversario
             case "ataque_fisico":
                 atacante.setDanioFisico(movimiento.getPotencia());
-                defensor.recibirDanioFisico(atacante.getDanioFisico());
+                defensor.recibirDanioFisico(atacante.getDanioFisico(), defensor.getDefensaFisica());
                 print("Vida del que recibe: " + defensor.getVida());
                 break;
             case "ataque_magico":
                 atacante.setDanioMagico(movimiento.getPotencia());
-                defensor.recibirDanioMagico(atacante.getDanioMagico());
+                defensor.recibirDanioMagico(atacante.getDanioMagico(), defensor.getDefensaMagica());
+                print("Vida del que recibe: " + defensor.getVida());
                 break;
         }
         
