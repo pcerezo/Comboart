@@ -19,6 +19,11 @@ public class SeleccionSystem : MonoBehaviour
     private bool pulsado;
     public GameObject botonJugar;
 
+    public void atras()
+    {
+        SceneManager.LoadScene("Titulo");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +45,9 @@ public class SeleccionSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int i_anterior;
+        bool ninguno = false;
+        
         // Detectamos si hemos seleccionado un personaje
         if (Input.GetMouseButtonDown(0))
         {
@@ -60,45 +68,58 @@ public class SeleccionSystem : MonoBehaviour
             }
             else
             {
+                i_anterior = i;
                 // Se recorre la lista preguntando quién ha sido seleccionado
                 while (!pulsado)
                 {
                     i++;
                     i %= listaPersonajes.Length;
                     pulsado = listaPersonajes[i].GetComponent<BotonPersonaje>().getPulsado();
+
+                    // Para evitar bucle infinito y que el juego se cuelgue
+                    if (i == i_anterior)
+                    {
+                        // indicamos que no hemos seleccionado ningún personaje
+                        ninguno = true;
+                        print("Ninguno seleccionado");
+                        break;
+                    }
                 }
-                
-                print("Pulsado: " + i);
-                // Si no ha seleccionado aún el j1, se lo asignamos
-                if (!terminado_j1)
+
+                if (!ninguno)
                 {
-                    // Apuntamos el nombre del personaje seleccionado
-                    nombrePersonajeJ1 = listaPersonajes[i].transform.GetChild(0).gameObject
-                        .GetComponent<TextMeshProUGUI>().text;
-                    GameObject.Find("SeleccionJ1").transform.GetChild(0).gameObject
-                        .GetComponent<TextMeshProUGUI>().SetText(nombrePersonajeJ1);
-                    
-                    // Ahora lo ponemos como no pulsado para evitar fallo para el siguiente jugador
-                    listaPersonajes[i].GetComponent<BotonPersonaje>().setPulsado(false);
-                    
-                    numPersonajeJ1 = listaPersonajes[i].GetComponent<BotonPersonaje>().getNumero();
-                    terminado_j1 = true;
-                    pulsado = false;
-                }
-                // Falta el jugador 2 por asignar
-                else
-                {
-                    // Igualmente apuntamos número y nombre para el jugador 2
-                    nombrePersonajeJ2 = listaPersonajes[i].transform.GetChild(0).gameObject
-                        .GetComponent<TextMeshProUGUI>().text;
-                    GameObject.Find("SeleccionJ2").transform.GetChild(0).gameObject
-                        .GetComponent<TextMeshProUGUI>().SetText(nombrePersonajeJ2);
-                    
-                    listaPersonajes[i].GetComponent<BotonPersonaje>().setPulsado(false);
-                    
-                    numPersonajeJ2 = listaPersonajes[i].GetComponent<BotonPersonaje>().getNumero();
-                    terminado_j2 = true;
-                    pulsado = false;
+                    print("Pulsado: " + i);
+                    // Si no ha seleccionado aún el j1, se lo asignamos
+                    if (!terminado_j1)
+                    {
+                        // Apuntamos el nombre del personaje seleccionado
+                        nombrePersonajeJ1 = listaPersonajes[i].transform.GetChild(0).gameObject
+                            .GetComponent<TextMeshProUGUI>().text;
+                        GameObject.Find("SeleccionJ1").transform.GetChild(0).gameObject
+                            .GetComponent<TextMeshProUGUI>().SetText(nombrePersonajeJ1);
+
+                        // Ahora lo ponemos como no pulsado para evitar fallo para el siguiente jugador
+                        listaPersonajes[i].GetComponent<BotonPersonaje>().setPulsado(false);
+
+                        numPersonajeJ1 = listaPersonajes[i].GetComponent<BotonPersonaje>().getNumero();
+                        terminado_j1 = true;
+                        pulsado = false;
+                    }
+                    // Falta el jugador 2 por asignar
+                    else
+                    {
+                        // Igualmente apuntamos número y nombre para el jugador 2
+                        nombrePersonajeJ2 = listaPersonajes[i].transform.GetChild(0).gameObject
+                            .GetComponent<TextMeshProUGUI>().text;
+                        GameObject.Find("SeleccionJ2").transform.GetChild(0).gameObject
+                            .GetComponent<TextMeshProUGUI>().SetText(nombrePersonajeJ2);
+
+                        listaPersonajes[i].GetComponent<BotonPersonaje>().setPulsado(false);
+
+                        numPersonajeJ2 = listaPersonajes[i].GetComponent<BotonPersonaje>().getNumero();
+                        terminado_j2 = true;
+                        pulsado = false;
+                    }
                 }
             }
 

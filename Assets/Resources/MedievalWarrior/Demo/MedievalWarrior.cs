@@ -14,12 +14,11 @@ public class MedievalWarrior : Personaje
         ataqueMagico = 5;
         defensaMagica = 5;
         velocidad = 10;
-        Movimiento espadazo = new Movimiento("Espadazo 4", 5, "ataque_fisico");
-        Movimiento tajo = new Movimiento("Tajo rápido", 2, "ataque_fisico");
-        Movimiento espadazo2 = new Movimiento("Espadazo 5", 20, "ataque_fisico");
-        Movimiento escudo = new Movimiento("Escudo", 5, "subir_defensa_fisica");
         
-        movimientos = new Movimiento[] {espadazo, espadazo2, tajo, escudo};
+        Movimiento espadazo = new Movimiento("Espadazo 4", 15, "ataque_fisico");
+        Movimiento correr = new Movimiento("Correr", 4, "subir_velocidad");
+        
+        movimientos = new Movimiento[] {espadazo, correr};
         
         //m_animator = GetComponent<Animator>();
     }

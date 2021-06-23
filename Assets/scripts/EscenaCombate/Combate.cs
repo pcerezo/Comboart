@@ -51,7 +51,7 @@ public class Combate : MonoBehaviour
                 anim1.runtimeAnimatorController = Resources.Load("HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect") as RuntimeAnimatorController;
                 break;
             case 1:
-                anim1.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR_IDLE") as RuntimeAnimatorController;
+                anim1.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR") as RuntimeAnimatorController;
                 break;
             case 2:
                 anim1.runtimeAnimatorController = Resources.Load("Ryu/Animations/RYU_IDLE") as RuntimeAnimatorController;
@@ -67,7 +67,7 @@ public class Combate : MonoBehaviour
                 anim2.runtimeAnimatorController = Resources.Load("HeroKnight/Sprites/animaciones/HeroKnight_BlockNoEffect") as RuntimeAnimatorController;
                 break;
             case 1:
-                anim2.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR_IDLE") as RuntimeAnimatorController;
+                anim2.runtimeAnimatorController = Resources.Load("MedievalWarrior/Animations/MEDIEVALWARRIOR") as RuntimeAnimatorController;
                 break;
             case 2:
                 anim2.runtimeAnimatorController = Resources.Load("Ryu/Animations/RYU_IDLE") as RuntimeAnimatorController;

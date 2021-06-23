@@ -15,8 +15,8 @@ public class Goku : Personaje
         defensaMagica = 1;
         velocidad = 14;
         
-        Movimiento patada = new Movimiento("Patada", 5, "ataque_fisico");
-        Movimiento onda = new Movimiento("Kamehameha", 10, "ataque_magico");
+        Movimiento patada = new Movimiento("Patada", 12, "ataque_fisico");
+        Movimiento onda = new Movimiento("Kamehameha", 18, "ataque_magico");
         Movimiento fortaleza = new Movimiento("Fortaleza", 1, "subir_defensa_fisica");
         Movimiento sprint = new Movimiento("Sprint", 2, "subir_velocidad");
         

@@ -15,8 +15,8 @@ public class Ryu : Personaje
         defensaMagica = 1;
         velocidad = 12;
         
-        Movimiento patada = new Movimiento("Patada", 5, "ataque_fisico");
-        Movimiento onda = new Movimiento("Onda", 10, "ataque_magico");
+        Movimiento patada = new Movimiento("Patada", 10, "ataque_fisico");
+        Movimiento onda = new Movimiento("Onda", 18, "ataque_magico");
         Movimiento rapidez = new Movimiento("Rapidez", 1, "subir_velocidad");
         
         movimientos = new Movimiento[] {patada, onda, rapidez};

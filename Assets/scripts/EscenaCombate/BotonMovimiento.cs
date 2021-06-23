@@ -46,14 +46,10 @@ public class BotonMovimiento : MonoBehaviour
         {
             jugadorActual.setTerminado(true);
             jugadorActual.setUltimoMovimiento(movimiento);
-            
-            limpiar();
         }
 
-        if (jugadorActual.getTerminado())
-        {
-            limpiar();
-        }
+        limpiar();
+
     }
 
     private void OnMouseDown()
@@ -62,6 +58,8 @@ public class BotonMovimiento : MonoBehaviour
         print("Movimiento: " + movimiento.getNombre());
         jugadorActual.setTerminado(true);
         jugadorActual.setUltimoMovimiento(movimiento);
+        
+        limpiar();
     }
 
     public String asignarTecla(int i, bool turno)

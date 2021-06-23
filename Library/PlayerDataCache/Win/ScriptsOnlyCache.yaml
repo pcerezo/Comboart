@@ -13,6 +13,7 @@ ScriptsOnlyBuild:
     - MainMenu
     - SeleccionSystem
     - Sensor_HeroKnight
+    - volverScript
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -47,10 +48,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -102,35 +101,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1686}
+      Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1690}
     - Class: 114
-      Script: {instanceID: 2156}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 2228}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2498}
+      Script: {instanceID: 2160}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2232}
     - Class: 114
-      Script: {instanceID: 2684}
+      Script: {instanceID: 2502}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2652}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2688}
     - Class: 114
-      Script: {instanceID: 2982}
+      Script: {instanceID: 2696}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 3156}
+      Script: {instanceID: 2986}
     - Class: 114
-      Script: {instanceID: 3260}
+      Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3648}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 4592}
+      Script: {instanceID: 3264}
+    - Class: 114
+      Script: {instanceID: 3652}
+    - Class: 114
+      Script: {instanceID: 4600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -171,23 +174,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 2498}
+      Script: {instanceID: 2502}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2652}
     - Class: 114
-      Script: {instanceID: 2692}
+      Script: {instanceID: 2696}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3046}
+      Script: {instanceID: 3050}
     - Class: 114
-      Script: {instanceID: 3156}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 3618}
+      Script: {instanceID: 3622}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -246,37 +249,37 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 2110}
+      Script: {instanceID: 2114}
     - Class: 114
-      Script: {instanceID: 2118}
+      Script: {instanceID: 2122}
     - Class: 114
-      Script: {instanceID: 2400}
+      Script: {instanceID: 2404}
     - Class: 114
-      Script: {instanceID: 2498}
+      Script: {instanceID: 2502}
     - Class: 114
-      Script: {instanceID: 2648}
+      Script: {instanceID: 2652}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2828}
     - Class: 114
-      Script: {instanceID: 3038}
+      Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3156}
+      Script: {instanceID: 3160}
     - Class: 114
-      Script: {instanceID: 4076}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 4196}
+      Script: {instanceID: 4084}
     - Class: 114
-      Script: {instanceID: 4316}
+      Script: {instanceID: 4204}
     - Class: 114
-      Script: {instanceID: 4652}
+      Script: {instanceID: 4324}
     - Class: 114
-      Script: {instanceID: 4786}
+      Script: {instanceID: 4660}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4794}
     - Class: 114
-      Script: {instanceID: 28408}
+      Script: {instanceID: 4912}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -334,6 +337,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkin
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: volverScript
   - hash:
       serializedVersion: 2
       Hash: 62fef86270a167c41a606cfca1ecc156
@@ -816,6 +825,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -886,6 +901,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptAtras
   - hash:
       serializedVersion: 2
       Hash: 8b1fe5dfdcf943fb3b72506b9f19335f
@@ -1137,10 +1158,10 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: MainMenu
+    className: ScriptAtras
   platform: 5
   scenePathNames:
   - Assets/Scenes/Titulo.unity
   - Assets/Scenes/SeleccionPersonaje.unity
   - Assets/Scenes/EscenaCombate.unity
-  playerPath: C:/Users/pcere/Documents/PLD/Prueba2D.exe
+  playerPath: C:/Users/pcere/Documents/PLD/Comboart.exe
