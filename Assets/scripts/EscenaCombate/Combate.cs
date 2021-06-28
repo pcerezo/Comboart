@@ -26,6 +26,9 @@ public class Combate : MonoBehaviour
     public Slider j1_slider, j2_slider;
     public GameObject tarjetJ1, tarjetJ2;
     public GameObject panel;
+    public GameObject tiempoJ1, tiempoJ2;
+    public Slider tiempoJ1_slider, tiempoJ2_slider;
+    private float tiempoMaximo, tiempoActual, unidad;
     private GameObject[] movimientos_g_o, objetos_g_o;
     private BotonMovimiento[] botonesMovimiento;
     private Jugador jugadorActual;
@@ -34,12 +37,20 @@ public class Combate : MonoBehaviour
     bool mostrarMovimientos, mostrarObjetos; // Controlamos que se muestren los objetos o los movimientos
     private bool clickado = false;
     private String personajeJ1, personajeJ2;
-
     private Animator anim1, anim2;
     // Start is called before the first frame update
     void Start()
     {
         print("Voy a empezar");
+        // tiempo máximo para escoger para cada jugador
+        tiempoMaximo = 50;
+        tiempoActual = 1;
+        unidad = 100;
+        tiempoJ1_slider.maxValue = tiempoMaximo;
+        tiempoJ2_slider.maxValue = tiempoMaximo;
+        tiempoJ1_slider.value = tiempoJ1_slider.maxValue;
+        tiempoJ2_slider.value = tiempoJ2_slider.maxValue;
+        
         // Cargamos los Animator
         anim1 = j1_obj.GetComponent<Animator>();
         anim2 = j2_obj.GetComponent<Animator>();
@@ -135,8 +146,32 @@ public class Combate : MonoBehaviour
         }
         else
         {
-            // Animación IDLE
+            tiempoActual -= Time.deltaTime;
+
+            if (tiempoActual <= 0)
+            {
+                tiempoActual = 1;
+                unidad--;
+            }
             
+            // Restamos tiempo para elegir
+            if (turno)
+            {
+                tiempoJ1_slider.value = unidad;
+            }
+            else
+            {
+                tiempoJ2_slider.value = unidad;
+            }
+
+            // Si se acabó el tiempo, termina el turno del jugador en cuestión
+            if (unidad == 0)
+            {
+                jugadorActual.setTerminado(true);
+                jugadorActual.setUltimoMovimiento(null);
+            }
+            
+            // Animación IDLE
             tarjetJ1.SetActive(turno);
             tarjetJ2.SetActive(!turno);
         }
@@ -252,12 +287,17 @@ public class Combate : MonoBehaviour
     IEnumerator elegirMovimiento()
     {
         print("Entra en elegirMovimiento()");
+        tiempoJ1.SetActive(true);
+        tiempoJ2.SetActive(true);
         GameObject.Find("Panel").SetActive(true);
         
         String turnoJugador;
         int aux, num;
         do
         {
+            // Inicializamos el tiempo para escoger
+            unidad = tiempoMaximo;
+            
             // Personalizamos texto según a quién le toque
             if (turno)
             {
@@ -300,8 +340,10 @@ public class Combate : MonoBehaviour
             // Esperamos a que el jugador actual seleccione un movimiento
             while (jugadorActual.getTerminado() == false)
             {
+                // Se va restando tiempo de elección mientras no haya escogido
                 Update();
-                // Cuando el jugador pulse un botón terminado será true
+                
+                // Cuando el jugador pulse un botón o se acabe su tiempo, terminado será true
                 // y se saldrá automáticamente de este bucle
                 yield return null;
             }
@@ -377,6 +419,14 @@ public class Combate : MonoBehaviour
     
     IEnumerator ejecutarAnimaciones()
     {
+        // Restauramos los valores del tiempo
+        tiempoJ1_slider.value = tiempoMaximo;
+        tiempoJ2_slider.value = tiempoMaximo;
+        
+        // Y ocultamos los tiempos durante las animaciones
+        tiempoJ1.SetActive(false);
+        tiempoJ2.SetActive(false);
+        
         bool final = false;
         tarjetJ1.SetActive(false);
         tarjetJ2.SetActive(false);
@@ -391,12 +441,17 @@ public class Combate : MonoBehaviour
             // Primero ataca el j1
             // Se actualizan vidas y características:
             ultimoMovimiento = j1.getUltimoMovimiento();
-            anim1.SetBool(ultimoMovimiento.getTipo(), true);
-            yield return new WaitForSeconds(2);
-            anim1.SetBool(ultimoMovimiento.getTipo(), false);
-            final = gestionarMovimiento(0, ultimoMovimiento);
-            // Animación durante 2 segundos
-            yield return new WaitForSeconds(2);
+            
+            // Si se termina el tiempo y no se escogió, el últimoMovimiento será null
+            if (ultimoMovimiento != null)
+            {
+                anim1.SetBool(ultimoMovimiento.getTipo(), true);
+                yield return new WaitForSeconds(2);
+                anim1.SetBool(ultimoMovimiento.getTipo(), false);
+                final = gestionarMovimiento(0, ultimoMovimiento);
+                // Animación durante 2 segundos
+                yield return new WaitForSeconds(2);
+            }
 
             // Si algún jugador se ha quedado sin vida, salimos
             if (!final)
@@ -404,11 +459,15 @@ public class Combate : MonoBehaviour
                 // Después ataca el j2
                 // Se actualizan vidas y características
                 ultimoMovimiento = j2.getUltimoMovimiento();
-                anim2.SetBool(ultimoMovimiento.getTipo(), true);
-                yield return new WaitForSeconds(2);
-                anim2.SetBool(ultimoMovimiento.getTipo(), false);
-                gestionarMovimiento(1, ultimoMovimiento);
-                yield return new WaitForSeconds(2);
+
+                // Si se termina el tiempo y no se escogió, el últimoMovimiento será null
+                if (ultimoMovimiento != null) {
+                    anim2.SetBool(ultimoMovimiento.getTipo(), true);
+                    yield return new WaitForSeconds(2);
+                    anim2.SetBool(ultimoMovimiento.getTipo(), false);
+                    gestionarMovimiento(1, ultimoMovimiento);
+                    yield return new WaitForSeconds(2);
+                }
             }
         }
         else // Primero j2, después j1
@@ -416,25 +475,33 @@ public class Combate : MonoBehaviour
             // Primero ataca el j2
             // Se actualizan vidas y características
             ultimoMovimiento = j2.getUltimoMovimiento();
-            anim2.SetBool(ultimoMovimiento.getTipo(), true);
-            yield return new WaitForSeconds(2);
-            anim2.SetBool(ultimoMovimiento.getTipo(), false);
-            final = gestionarMovimiento(1, ultimoMovimiento);
-            yield return new WaitForSeconds(2);
             
+            // Si se termina el tiempo y no se escogió, el últimoMovimiento será null
+            if (ultimoMovimiento != null)
+            {
+                anim2.SetBool(ultimoMovimiento.getTipo(), true);
+                yield return new WaitForSeconds(2);
+                anim2.SetBool(ultimoMovimiento.getTipo(), false);
+                final = gestionarMovimiento(1, ultimoMovimiento);
+                yield return new WaitForSeconds(2);
+            }
 
             if (!final)
             {
                 // Después ataca el j1
                 // Se actualizan vidas y características:
                 ultimoMovimiento = j1.getUltimoMovimiento();
-                anim1.SetBool(ultimoMovimiento.getTipo(), true);
-                yield return new WaitForSeconds(2);
-                anim1.SetBool(ultimoMovimiento.getTipo(), false);
-                gestionarMovimiento(0, ultimoMovimiento);
-                // Animación durante 2 segundos
-                yield return new WaitForSeconds(2);
                 
+                // Si se termina el tiempo y no se escogió, el últimoMovimiento será null
+                if (ultimoMovimiento != null)
+                {
+                    anim1.SetBool(ultimoMovimiento.getTipo(), true);
+                    yield return new WaitForSeconds(2);
+                    anim1.SetBool(ultimoMovimiento.getTipo(), false);
+                    gestionarMovimiento(0, ultimoMovimiento);
+                    // Animación durante 2 segundos
+                    yield return new WaitForSeconds(2);
+                }
             }
         }
 

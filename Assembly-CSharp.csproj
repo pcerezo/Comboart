@@ -62,6 +62,7 @@
      <Compile Include="Assets\Resources\Ryu\Scripts\Ryu.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\WindMill.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
+     <Compile Include="Assets\scripts\Titulo\ScriptAtras.cs" />
      <Compile Include="Assets\scripts\EscenaCombate\Jugador.cs" />
      <Compile Include="Assets\scripts\EscenaCombate\Combate.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -113,7 +114,6 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
-     <Compile Include="Assets\scripts\Titulo\ScriptAtras.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

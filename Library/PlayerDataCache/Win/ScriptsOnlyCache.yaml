@@ -101,11 +101,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1594}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1688}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1796}
     - Class: 114
       Script: {instanceID: 2122}
     - Class: 114
@@ -174,7 +174,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1796}
     - Class: 114
       Script: {instanceID: 2502}
     - Class: 114
@@ -249,7 +249,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1464}
     - Class: 114
-      Script: {instanceID: 1798}
+      Script: {instanceID: 1796}
     - Class: 114
       Script: {instanceID: 2114}
     - Class: 114
@@ -453,6 +453,12 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScriptAtras
+  - hash:
+      serializedVersion: 2
       Hash: 800c50acba124432abb4cf0d47202e06
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -483,7 +489,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: 92697a65aae95b61e7fd2e600a95fe7c
+      Hash: d83c63df8a558a1055da6d860eb4935c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Combate
@@ -1153,15 +1159,9 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextEventCheck
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ScriptAtras
   platform: 5
   scenePathNames:
   - Assets/Scenes/Titulo.unity
   - Assets/Scenes/SeleccionPersonaje.unity
   - Assets/Scenes/EscenaCombate.unity
-  playerPath: C:/Users/pcere/Documents/PLD/Comboart.exe
+  playerPath: C:/Users/pcere/Documents/PLD/Comboart_version2/Comboart.exe
